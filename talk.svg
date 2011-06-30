@@ -18,10 +18,10 @@
 >
 <script xlink:href="slick.js"/>
 <script xlink:href="script.js"/>
-<defs>
+<defs id="resources">
 <!--@+others-->
-<!--@+node:gcross.20110629122941.1126: ** title-->
-<g id="title">
+<!--@+node:gcross.20110629122941.1126: ** title_slide-->
+<g id="title_slide">
   <defs
      id="defs26765">
     <radialGradient
@@ -285,6 +285,18 @@
     height="768"
     style="fill:grey"
 />
+<!--@+node:gcross.20110629122941.1132: ** title stylesheet-->
+<style><![CDATA[
+    .title {
+        font-size:40px;
+        fill:#ffffff;
+        font-family:Futura;
+        position:fixed;
+    }
+]]></style>
+
+<!--@+others-->
+<!--@-others-->
 <!--@-others-->
 </defs>
     <rect
