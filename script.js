@@ -11,8 +11,8 @@ window.addEventListener("load",function() {
         hireUseActor("standard_backdrop","title"),
         hireUseActor("grey_rectangle","title"),
         parallel(
-            fadeOut(1,function(stage) { return stage.grey_rectangle; }),
-            fadeOut(1,function(stage) { return stage.title; })
+            fadeOut(1,"grey_rectangle"),
+            fadeOut(1,"title")
         ),
         fire("title"),
         fire("grey_rectangle"),
