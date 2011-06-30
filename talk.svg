@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--@+leo-ver=5-thin-->
+<!--@+node:gcross.20110629122858.1121: * @file talk.svg-->
+<!--@@first-->
+
+<!--@@language xml-->
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   height="768"
+   width="1024"
+   id="svg2"
+   version="1.1"
+   style="background-color:black"
+>
+<script xlink:href="slick.js"/>
+<script xlink:href="script.js"/>
+<defs>
+<!--@+others-->
+<!--@+node:gcross.20110629122941.1126: ** title-->
+<image
+    id="title"
+    xlink:href="title.svg"
+    x="0"
+    y="0"
+    width="1024px"
+    height="768px"
+/>
+
+<!--@+node:gcross.20110629122941.1130: ** standard_backdrop-->
+<g id="standard_backdrop">
+    <linearGradient
+       x1="485.95532"
+       y1="130"
+       x2="485.95532"
+       y2="-182.48184"
+       id="linearGradient3698"
+       xlink:href="#linearGradient3448"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.9980468,0,0,1,2.0000095,-5e-5)" />
+    <linearGradient
+       id="linearGradient3448">
+      <stop
+         id="stop3450"
+         style="stop-color:#000000;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop9511"
+         style="stop-color:#4f4f4f;stop-opacity:1"
+         offset="0.6122449" />
+      <stop
+         id="stop3452"
+         style="stop-color:#aeaeae;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+  <rect
+     width="1020"
+     height="768"
+     x="3"
+     y="5.1757809e-07"
+     id="rect8707"
+     style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.2330811;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+  <rect
+     width="1022"
+     height="130"
+     x="2"
+     y="-2.9999999e-05"
+     id="rect3686"
+     style="fill:url(#linearGradient3698);fill-opacity:1;stroke:none;display:inline" />
+</g>
+<!--@+node:gcross.20110629122941.1131: ** grey_rectangle-->
+<rect
+    id="grey_rectangle"
+    x="0"
+    y="0"
+    width="1024"
+    height="768"
+    style="fill:grey"
+/>
+<!--@-others-->
+</defs>
+    <rect
+        id="slide-area"
+        x="0"
+        y="0"
+        width="1024"
+        height="768"
+        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.2330811;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+    />
+</svg>
+<!--@-leo-->
