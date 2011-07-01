@@ -15,6 +15,8 @@ function MagnifiedBoxActor(id) {
     this.right_actor = new UseActor(id)
     this.right_actor.x = 750
     this.right_actor.y = 480
+    this.right_actor.style.filter = "url(#particle_box_filter)"
+    this.blur = document.getElementById("particle_box_blur")
 }
 MagnifiedBoxActor.prototype = Object.create(ActorPrototype)
 augment(MagnifiedBoxActor,{
@@ -32,6 +34,8 @@ augment(MagnifiedBoxActor,{
         return node
     }
 ,   update: function() {
+        var t = 1-this.magnification
+        this.blur.setAttribute("stdDeviation",40*t*t)
         this.line1.setAttribute("x2",270+130*this.magnification)
         this.line1.setAttribute("y2",480-130*this.magnification)
         this.line2.setAttribute("x2",270+130*this.magnification)

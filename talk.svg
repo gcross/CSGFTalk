@@ -32,6 +32,15 @@
         offset="1"
     />
 </linearGradient>
+<!--@+node:gcross.20110630221000.1148: ** Filters-->
+<!--@+node:gcross.20110630221000.1149: *3* particle_box_filter-->
+<filter id="particle_box_filter"
+   x="-130"
+   y="-130"
+   width="260"
+   height="260"
+   filterUnits="userSpaceOnUse"
+ ><feGaussianBlur stdDeviation="0" id="particle_box_blur"/></filter>
 <!--@+node:gcross.20110629122941.1136: ** Actors-->
 <!--@+node:gcross.20110629122941.1126: *3* title_slide-->
 <g id="title_slide">
