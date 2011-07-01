@@ -5,10 +5,16 @@
 //@+others
 //@+node:gcross.20110629122941.1147: ** Actors
 //@+node:gcross.20110629122941.1148: *3* MagnifiedBoxActor
-function MagnifiedBoxActor() {
+function MagnifiedBoxActor(id) {
     this.box = new UseActor("particle_box")
     this.box.x = 270
     this.box.y = 480
+    this.left_actor = new UseActor(id)
+    this.left_actor.x = 270
+    this.left_actor.y = 480
+    this.right_actor = new UseActor(id)
+    this.right_actor.x = 750
+    this.right_actor.y = 480
 }
 MagnifiedBoxActor.prototype = Object.create(ActorPrototype)
 augment(MagnifiedBoxActor,{
@@ -20,6 +26,8 @@ augment(MagnifiedBoxActor,{
         node.appendChild(this.line1)
         node.appendChild(this.line2)
         node.appendChild(this.box.getNode())
+        node.appendChild(this.left_actor.getNode())
+        node.appendChild(this.right_actor.getNode())
         this.update()
         return node
     }
@@ -30,12 +38,17 @@ augment(MagnifiedBoxActor,{
         this.line2.setAttribute("y2",480+130*this.magnification)
         this.box.scale = this.magnification
         this.box.update()
+        this.left_actor.scale = this.magnification
+        this.left_actor.update()
+        this.right_actor.update()
     }
 })
 appendToMethod(MagnifiedBoxActor.prototype,"clearNode",function() {
     delete this.line1
     delete this.line2
     this.box.clearNode()
+    this.left_actor.clearNode()
+    this.right_actor.clearNode()
 })
 //@-others
 
@@ -69,13 +82,7 @@ window.addEventListener("load",function() {
         hireUseActor("standard_backdrop","title_slide"),
         hireUseActor("title: Quantum mechanics is fuzzy","title_slide"),
         hireUseActor("shrinking_particle_backdrop","title_slide"),
-        hire("magnified_box",new MagnifiedBoxActor(),"title_slide"),
-        hireUseActor("particle","title_slide"),
-        set(function(stage) { return stage.particle; },"x",270),
-        set(function(stage) { return stage.particle; },"y",480),
-        hire("other_particle",new UseActor("particle"),"title_slide"),
-        set(function(stage) { return stage.other_particle; },"x",750),
-        set(function(stage) { return stage.other_particle; },"y",480),
+        hire("magnified_box",new MagnifiedBoxActor("particle"),"title_slide"),
         hireUseActor("grey_rectangle","title_slide"),
         parallel(
             fadeOut(1,"grey_rectangle"),
@@ -84,10 +91,7 @@ window.addEventListener("load",function() {
         fire("title_slide"),
         fire("grey_rectangle"),
         "",
-        parallel(
-            linear(5,"particle","scale",1,0),
-            linear(5,"magnified_box","magnification",0)
-        ),
+        linear(5,"magnified_box","magnification",0),
         //@-<< Script >>
     ])
 },false)
