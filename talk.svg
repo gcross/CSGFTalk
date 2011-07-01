@@ -304,7 +304,6 @@
     fy="0.4"
     id="particle_gradient"
     xlink:href="#blackwhite"
-    gradientUnits="objectSpaceOnUse"
 />
 <circle
     id="particle"
