@@ -20,7 +20,20 @@
 <script xlink:href="script.js"/>
 <defs id="resources">
 <!--@+others-->
-<!--@+node:gcross.20110629122941.1126: ** title_slide-->
+<!--@+node:gcross.20110629122941.1139: ** Gradients-->
+<!--@+node:gcross.20110629122941.1140: *3* blackwhite-->
+<linearGradient id="blackwhite">
+    <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0"
+    />
+    <stop
+        style="stop-color:#000000;stop-opacity:1"
+        offset="1"
+    />
+</linearGradient>
+<!--@+node:gcross.20110629122941.1136: ** Actors-->
+<!--@+node:gcross.20110629122941.1126: *3* title_slide-->
 <g id="title_slide">
   <defs
      id="defs26765">
@@ -235,7 +248,16 @@
        y="434.39999"
        style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24467-3);fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:Eadui;-inkscape-font-specification:Eadui Medium">Smashing down the barriers</tspan></text>
 </g>
-<!--@+node:gcross.20110629122941.1130: ** standard_backdrop-->
+<!--@+node:gcross.20110629122941.1131: *4* grey_rectangle-->
+<rect
+    id="grey_rectangle"
+    x="0"
+    y="0"
+    width="1024"
+    height="768"
+    style="fill:grey"
+/>
+<!--@+node:gcross.20110629122941.1130: *3* standard_backdrop-->
 <g id="standard_backdrop">
     <linearGradient
        x1="485.95532"
@@ -249,15 +271,12 @@
     <linearGradient
        id="linearGradient3448">
       <stop
-         id="stop3450"
          style="stop-color:#000000;stop-opacity:1"
          offset="0" />
       <stop
-         id="stop9511"
          style="stop-color:#4f4f4f;stop-opacity:1"
          offset="0.6122449" />
       <stop
-         id="stop3452"
          style="stop-color:#aeaeae;stop-opacity:1"
          offset="1" />
     </linearGradient>
@@ -276,27 +295,108 @@
      id="rect3686"
      style="fill:url(#linearGradient3698);fill-opacity:1;stroke:none;display:inline" />
 </g>
-<!--@+node:gcross.20110629122941.1131: ** grey_rectangle-->
-<rect
-    id="grey_rectangle"
-    x="0"
-    y="0"
-    width="1024"
-    height="768"
-    style="fill:grey"
+<!--@+node:gcross.20110629122941.1135: *3* particle-->
+<radialGradient
+    cx="0.4"
+    cy="0.4"
+    r="0.5"
+    fx="0.4"
+    fy="0.4"
+    id="particle_gradient"
+    xlink:href="#blackwhite"
+    gradientUnits="objectSpaceOnUse"
 />
-<!--@+node:gcross.20110629122941.1132: ** title stylesheet-->
+<circle
+    id="particle"
+    r="50"
+    style="fill:url(#particle_gradient);fill-opacity:1;stroke:none;display:inline"
+/>
+<!--@+node:gcross.20110629122941.1143: *3* particle_box-->
+<style>
+.particle_box {
+    stroke:#000000;
+    stroke-width:2px;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:4;
+    stroke-opacity:1;
+    fill:none
+}
+</style>
+
+<rect
+    class="particle_box"
+    width="260"
+    height="260"
+    x="-130"
+    y="-130"
+    id="particle_box"
+/>
+<!--@+node:gcross.20110629122941.1145: *3* shrinking_particle_backdrop-->
+<g id="shrinking_particle_backdrop">
+  <text
+     x="270.9082"
+     y="328"
+     id="text9662"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+       x="270.9082"
+       y="328"
+       id="tspan9664">Actual size</tspan></text>
+  <text
+     x="749.85352"
+     y="327.88196"
+     id="text9668"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+       x="749.85352"
+       y="327.88196"
+       id="tspan9670">Magnified</tspan></text>
+    <use xlink:href="#particle_box" transform="translate(750,480)"/>
+</g>
+<!--@+node:gcross.20110630221000.1145: ** Elements-->
+<!--@+node:gcross.20110630221000.1146: *3* magnification lines-->
+<style>
+.magnification_line {
+    stroke:#000000;
+    stroke-width:1px;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:4;
+    stroke-opacity:1;
+    stroke-dasharray:4,4;
+}
+</style>
+
+<line
+    x1="620"
+    y1="350"
+    x2="400"
+    y2="350"
+    class="magnification_line"
+    id="magnification_line_1"
+/>
+
+<line
+    x1="620"
+    y1="610"
+    x2="400"
+    y2="610"
+    class="magnification_line"
+    id="magnification_line_2"
+/>
+<!--@+node:gcross.20110629122941.1138: ** Stylesheets-->
 <style><![CDATA[
+    <!--@+others-->
+    <!--@+node:gcross.20110629122941.1132: *3* title-->
     .title {
         font-size:40px;
         fill:#ffffff;
         font-family:Futura;
         position:fixed;
     }
+    <!--@-others-->
 ]]></style>
-
-<!--@+others-->
-<!--@-others-->
 <!--@-others-->
 </defs>
     <rect
