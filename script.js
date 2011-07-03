@@ -94,8 +94,7 @@ window.addEventListener("load",function() {
             fadeOut(1,"grey_rectangle"),
             fadeOut(1,"title_slide")
         ),
-        fire("title_slide"),
-        fire("grey_rectangle"),
+        fire("title_slide","grey_rectangle"),
         "",
         decelerate(10,"magnified_box","magnification",0),
         "",
@@ -164,10 +163,7 @@ window.addEventListener("load",function() {
             fadeOut(1,"right_chip"),
             fadeOut(1,"whitescreen")
         ),
-        fire("whitescreen"),
-        fire("intel"),
-        fire("left_chip"),
-        fire("right_chip"),
+        fire("whitescreen","intel","left_chip","right_chip"),
         "",
         parallel(
             decelerate(10,"magnified_box","magnification",0),
