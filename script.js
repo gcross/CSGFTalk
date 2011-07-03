@@ -54,6 +54,28 @@ appendToMethod(MagnifiedBoxActor.prototype,"clearNode",function() {
     delete this.right_particle
 })
 augmentWithStyleBehavior(MagnifiedBoxActor)
+//@+node:gcross.20110702233701.1159: *3* FaaaaaceActor
+function FaaaaaceActor() {
+    this.actor = new UseActor("faaaaace")
+    this.style = {}
+    this.mouth = document.getElementById("mouth")
+    this.teardrop = document.getElementById("teardrop")
+}
+FaaaaaceActor.prototype = Object.create(ActorPrototype)
+augment(FaaaaaceActor,{
+    unhappiness: 1
+,   createNode: function() {
+        return this.actor.getNode()
+    }
+,   update: function() {
+        this.teardrop.setAttribute("opacity",1-(1-this.unhappiness)/2)
+        this.mouth.setAttribute("transform","translate(+738,+494)scale(1," + this.unhappiness + ")translate(-738,-494)")
+    }
+,   clearNode: function() {
+        this.actor.clearNode()
+    }
+})
+augmentWithStyleBehavior(FaaaaaceActor)
 //@+node:gcross.20110702143210.1162: ** Functions
 //@+node:gcross.20110702143210.1163: *3* rotateTitle
 function rotateTitle(index) {
@@ -207,13 +229,16 @@ window.addEventListener("load",function() {
         //@+node:gcross.20110702143210.1161: *3* Quantum computing: embrace the fuzz!
         ]).concat(rotateTitle(2)).concat([
         "",
-        hireUseActor("whitescreen","magnified_box"),
+        hireUseActor("whitescreen","shrinking_particle_backdrop"),
+        hire("faaaaace",new FaaaaaceActor(),"whitescreen"),
         parallel(
+            fadeOut(1,"shrinking_particle_backdrop"),
             fadeOut(1,"magnified_box"),
             fadeOut(1,"whitescreen")
         ),
-        fire("whitescreen","magnified_box"),
+        fire("whitescreen","magnified_box","shrinking_particle_backdrop"),
         "",
+        linear(1,"faaaaace","unhappiness",-1),
         //@-others
         //@-<< Script >>
     ]))
