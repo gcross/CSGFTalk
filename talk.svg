@@ -318,6 +318,26 @@
       </g>
     </svg>
 </g>
+<!--@+node:gcross.20110702233701.1161: *3* Numbers-->
+<!--@+node:gcross.20110702233701.1162: *4* huge-->
+  <text
+     x="759.25"
+     y="630"
+     id="huge_one"
+     xml:space="preserve"
+     style="font-size:512px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+       x="759.25"
+       y="630"
+       id="tspan17427">1</tspan></text>
+  <text
+     x="281.75"
+     y="630"
+     id="huge_zero"
+     xml:space="preserve"
+     style="font-size:512px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+       x="281.75"
+       y="630"
+       id="tspan17431">0</tspan></text>
 <!--@+node:gcross.20110702143210.1147: *3* Particles and boxes-->
 <!--@+node:gcross.20110702143210.1156: *4* electron_box-->
 <defs

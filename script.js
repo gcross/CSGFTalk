@@ -246,6 +246,24 @@ window.addEventListener("load",function() {
         ),
         fire("glass_half_empty"),
         "",
+        hireUseActor("huge_zero","glass_half_full"),
+        parallel(
+            fadeOut(1,"glass_half_full"),
+            fadeOut(1,"faaaaace"),
+            fadeIn(1,"huge_zero")
+        ),
+        "",
+        hireUseActor("huge_one"),
+        parallel(
+            fadeOut(0.5,"huge_zero"),
+            fadeIn(0.5,"huge_one")
+        ),
+        "",
+        fadeOut(0.5,"huge_one"),
+        parallel(
+            fadeOut(0.5,"huge_zero"),
+            fadeIn(0.5,"huge_one")
+        ),
         //@-others
         //@-<< Script >>
     ]))
