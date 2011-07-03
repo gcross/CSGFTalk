@@ -5,88 +5,90 @@
 //@+others
 //@+node:gcross.20110629122941.1147: ** Actors
 //@+node:gcross.20110629122941.1148: *3* MagnifiedBoxActor
-function MagnifiedBoxActor(id) {
-    this.box = new UseActor("particle_box")
-    this.box.x = 270
-    this.box.y = 480
-    this.left_actor = new UseActor(id)
-    this.left_actor.x = 270
-    this.left_actor.y = 480
-    this.right_actor = new UseActor(id)
-    this.right_actor.x = 750
-    this.right_actor.y = 480
-    this.right_actor.style.filter = "url(#particle_box_filter)"
+function MagnifiedBoxActor(particle_box_id) {
+    this.particle_box_id = particle_box_id
     this.blur = document.getElementById("particle_box_blur")
+    this.style = {}
 }
 MagnifiedBoxActor.prototype = Object.create(ActorPrototype)
 augment(MagnifiedBoxActor,{
     magnification: 1
+,   particle_y: 0
 ,   createNode: function() {
         this.line1 = document.getElementById("magnification_line_1").cloneNode()
+        this.line1.removeAttribute("id")
         this.line2 = document.getElementById("magnification_line_2").cloneNode()
+        this.line2.removeAttribute("id")
+        this.left_particle_box = document.getElementById(this.particle_box_id).cloneNode(true)
+        this.left_particle = this.left_particle_box.getElementsByClassName("particle").item(0)
+        this.right_particle_box = document.getElementById(this.particle_box_id).cloneNode(true)
+        this.right_particle_box.setAttribute("transform","translate(750,480)")
+        this.right_particle = this.right_particle_box.getElementsByClassName("particle").item(0)
         var node = document.createElementNS(svg_namespace,"g")
         node.appendChild(this.line1)
         node.appendChild(this.line2)
-        node.appendChild(this.box.getNode())
-        node.appendChild(this.left_actor.getNode())
-        node.appendChild(this.right_actor.getNode())
+        node.appendChild(this.left_particle_box)
+        node.appendChild(this.right_particle_box)
+        this.node = node
         this.update()
         return node
     }
 ,   update: function() {
         var t = 1-this.magnification
-        this.blur.setAttribute("stdDeviation",40*t*t)
+        this.blur.setAttribute("stdDeviation",40*t*t*t*t)
         this.line1.setAttribute("x2",270+130*this.magnification)
         this.line1.setAttribute("y2",480-130*this.magnification)
         this.line2.setAttribute("x2",270+130*this.magnification)
         this.line2.setAttribute("y2",480+130*this.magnification)
-        this.box.scale = this.magnification
-        this.box.update()
-        this.left_actor.scale = this.magnification
-        this.left_actor.update()
-        this.right_actor.update()
+        this.left_particle_box.setAttribute("transform","translate(270,480)scale(" + this.magnification + ")")
+        this.left_particle.setAttribute("transform","translate(0," + this.particle_y + ")")
+        this.right_particle.setAttribute("transform","translate(0," + this.particle_y + ")")
     }
 })
 appendToMethod(MagnifiedBoxActor.prototype,"clearNode",function() {
     delete this.line1
     delete this.line2
-    this.box.clearNode()
-    this.left_actor.clearNode()
-    this.right_actor.clearNode()
+    delete this.left_particle_box
+    delete this.left_particle
+    delete this.right_particle_box
+    delete this.right_particle
 })
+augmentWithStyleBehavior(MagnifiedBoxActor)
 //@-others
+
+var titles = [
+    //@+<< Titles >>
+    //@+node:gcross.20110629122941.1134: ** << Titles >>
+    "Quantum mechanics is fuzzy",
+    "But who actually makes things that small?",
+    //@-<< Titles >>
+]
 
 window.addEventListener("load",function() {
     (function() {
         var resources = document.getElementById("resources")
-        var titles = [
-            //@+<< Titles >>
-            //@+node:gcross.20110629122941.1134: ** << Titles >>
-            "Quantum mechanics is fuzzy",
-            //@-<< Titles >>
-        ]
+        var title_template = document.getElementById("title_template")
         for(var i = 0; i < titles.length; ++i) {
             var title = titles[i]
-            var node = document.createElementNS(svg_namespace,"text")
-            node.setAttribute("x",30.5)
-            node.setAttribute("y",80.5)
-            node.setAttribute("class","title")
-            node.setAttribute("id","title: " + title)
+            var node = title_template.cloneNode()
+            node.setAttribute("id",title)
             node.appendChild(document.createTextNode(title))
-            node = document.adoptNode(node)
-            document.documentElement.appendChild(node)
+            resources.appendChild(node)
         }
     })()
 
     initializeSlick([
         //@+<< Script >>
         //@+node:gcross.20110629122941.1129: ** << Script >>
+        //@+others
+        //@+node:gcross.20110702143210.1151: *3* Title
         hireUseActor("title_slide"),
-        "outline",
+        //@+node:gcross.20110702143210.1150: *3* Quantum mechanics is fuzzy
+        "",
         hireUseActor("standard_backdrop","title_slide"),
-        hireUseActor("title: Quantum mechanics is fuzzy","title_slide"),
+        hireUseActor(titles[0],"title_slide"),
         hireUseActor("shrinking_particle_backdrop","title_slide"),
-        hire("magnified_box",new MagnifiedBoxActor("particle"),"title_slide"),
+        hire("magnified_box",new MagnifiedBoxActor("particle_box"),"title_slide"),
         hireUseActor("grey_rectangle","title_slide"),
         parallel(
             fadeOut(1,"grey_rectangle"),
@@ -95,7 +97,64 @@ window.addEventListener("load",function() {
         fire("title_slide"),
         fire("grey_rectangle"),
         "",
-        linear(5,"magnified_box","magnification",0),
+        decelerate(10,"magnified_box","magnification",0),
+        "",
+        smooth(1,"magnified_box","magnification",1),
+        "",
+        smooth(0.5,"magnified_box","particle_y",+65),
+        hire("magnified_box2",new MagnifiedBoxActor("particle_box2"),"magnified_box"),
+        set("magnified_box2","particle_y",+65),
+        fadeOut(0.5,"magnified_box"),
+        fire("magnified_box"),
+        "",
+        parallel(
+            decelerate(10,"magnified_box2","magnification",0),
+            sequence(
+                wait(4),
+                accelerate(6,"magnified_box2","particle_y",0)
+            )
+        ),
+        "",
+        //@+node:gcross.20110702143210.1152: *3* But who actually makes things that small?
+        parallel(
+            accelerate(0.25,titles[0],"y",-50),
+            fadeOut(0.25,titles[0])
+        ),
+        fire(titles[0]),
+        hireUseActor(titles[1]),
+        set(titles[1],"y",-50),
+        parallel(
+            decelerate(0.25,titles[1],"y",0),
+            fadeIn(0.25,titles[1])
+        ),
+        "",
+        hireUseActor("intel"),
+        set("intel","x",512),
+        set("intel","y",480),
+        set("intel","scale",0),
+        parallel(
+            fadeOut(1,"magnified_box2"),
+            fadeOut(1,"shrinking_particle_backdrop"),
+            linear(2,"intel","scale",1.5)
+        ),
+        fire("magnified_box2"),
+        fire("shrinking_particle_backdrop"),
+        "",
+        hireUseActor("amd"),
+        set("amd","y",250),
+        decelerate(0.5,"amd","y",0),
+        "",
+        decelerate(0.5,"amd","y",250),
+        "",
+        hireUseActor("left_chip"),
+        set("left_chip","x",-500),
+        decelerate(0.5,"left_chip","x",0),
+        "",
+        hireUseActor("right_chip"),
+        set("right_chip","x",500),
+        decelerate(0.5,"right_chip","x",0),
+        "",
+        //@-others
         //@-<< Script >>
     ])
 },false)

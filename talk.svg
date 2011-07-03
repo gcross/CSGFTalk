@@ -33,7 +33,39 @@
     />
 </linearGradient>
 <!--@+node:gcross.20110630221000.1148: ** Filters-->
-<!--@+node:gcross.20110630221000.1149: *3* particle_box_filter-->
+<!--@+node:gcross.20110629122941.1136: ** Actors-->
+<!--@+node:gcross.20110702143210.1147: *3* Particles and boxes-->
+<!--@+node:gcross.20110630221000.1146: *4* magnification lines-->
+<style>
+.magnification_line {
+    stroke:#000000;
+    stroke-width:1px;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:4;
+    stroke-opacity:1;
+    stroke-dasharray:4,4;
+}
+</style>
+
+<line
+    x1="620"
+    y1="350"
+    x2="400"
+    y2="350"
+    class="magnification_line"
+    id="magnification_line_1"
+/>
+
+<line
+    x1="620"
+    y1="610"
+    x2="400"
+    y2="610"
+    class="magnification_line"
+    id="magnification_line_2"
+/>
+<!--@+node:gcross.20110630221000.1149: *4* particle_box_filter-->
 <filter id="particle_box_filter"
    x="-130"
    y="-130"
@@ -41,7 +73,261 @@
    height="260"
    filterUnits="userSpaceOnUse"
  ><feGaussianBlur stdDeviation="0" id="particle_box_blur"/></filter>
-<!--@+node:gcross.20110629122941.1136: ** Actors-->
+<!--@+node:gcross.20110629122941.1143: *4* particle_boxes-->
+<style>
+.particle_box {
+    stroke:#000000;
+    stroke-width:2px;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:4;
+    stroke-opacity:1;
+    fill:white;
+    fill-opacity:1;
+}
+</style>
+
+<g id="particle_box">
+    <rect
+        class="particle_box"
+        width="260"
+        height="260"
+        x="-130"
+        y="-130"
+    />
+    <g style="filter:url(#particle_box_filter)">
+        <use
+            class="particle"
+            xlink:href="#particle"
+        />
+    </g>
+</g>
+
+<g id="particle_box2">
+    <rect
+        class="particle_box"
+        width="260"
+        height="260"
+        x="-130"
+        y="-130"
+    />
+    <line
+        class="particle_box"
+        x1="-130" y1="0"
+        x2="+130" y2="0"
+    />
+    <g style="filter:url(#particle_box_filter)">
+        <use
+            class="particle"
+            xlink:href="#particle"
+        />
+    </g>
+</g>
+<!--@+node:gcross.20110629122941.1135: *4* particles-->
+<radialGradient
+    cx="0.4"
+    cy="0.4"
+    r="0.5"
+    fx="0.4"
+    fy="0.4"
+    id="particle_gradient"
+    xlink:href="#blackwhite"
+/>
+<circle
+    id="particle"
+    r="50"
+    style="fill:url(#particle_gradient);fill-opacity:1;stroke:none;display:inline"
+/>
+<!--@+node:gcross.20110629122941.1145: *4* shrinking_particle_backdrop-->
+<g id="shrinking_particle_backdrop">
+  <text
+     x="270.9082"
+     y="328"
+     id="text9662"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+       x="270.9082"
+       y="328"
+       id="tspan9664">Actual size</tspan></text>
+  <text
+     x="749.85352"
+     y="327.88196"
+     id="text9668"
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+       x="749.85352"
+       y="327.88196"
+       id="tspan9670">Magnified</tspan></text>
+</g>
+<!--@+node:gcross.20110629122941.1130: *3* standard_backdrop-->
+<g id="standard_backdrop">
+    <linearGradient
+       x1="485.95532"
+       y1="130"
+       x2="485.95532"
+       y2="-182.48184"
+       id="linearGradient3698"
+       xlink:href="#linearGradient3448"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.9980468,0,0,1,2.0000095,-5e-5)" />
+    <linearGradient
+       id="linearGradient3448">
+      <stop
+         style="stop-color:#000000;stop-opacity:1"
+         offset="0" />
+      <stop
+         style="stop-color:#4f4f4f;stop-opacity:1"
+         offset="0.6122449" />
+      <stop
+         style="stop-color:#aeaeae;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+  <rect
+     width="1020"
+     height="768"
+     x="3"
+     y="5.1757809e-07"
+     id="rect8707"
+     style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.2330811;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+  <rect
+     width="1022"
+     height="130"
+     x="2"
+     y="-2.9999999e-05"
+     id="rect3686"
+     style="fill:url(#linearGradient3698);fill-opacity:1;stroke:none;display:inline" />
+</g>
+<!--@+node:gcross.20110702143210.1153: *3* intel-->
+<g
+    id="intel"
+    transform="translate(-182.91876,-141)"
+>
+    <svg
+       width="365.83752"
+       height="242.00615"
+    >
+      <g
+         transform="matrix(1.25,0,0,1.25,0.12054928,-0.0930646)"
+         id="g6001"
+         style="display:inline">
+        <path
+           d="M 291.28737,55.058565 C 277.50683,-12.11587 147.525,-16.369963 63.737895,34.808098 l 0,5.652389 C 147.41497,-2.7316788 266.14859,-2.4562338 276.95315,59.422033 c 3.6407,20.498818 -7.82608,41.818447 -28.38636,54.085537 l 0,16.05357 c 24.75016,-9.08116 50.0495,-38.47298 42.72058,-74.502575 M 138.92617,172.67053 C 81.102616,178.02238 20.853265,169.59848 12.418485,124.23687 8.2296052,101.90025 18.426965,78.192925 31.877897,63.483967 l 0,-7.875516 C 7.6234054,76.957185 -5.5514356,103.96031 2.0555709,135.84419 c 9.7011961,40.91535 61.4067331,64.0753 140.3437391,56.36385 31.2543,-3.01735 72.15678,-13.11599 100.54313,-28.78223 l 0,-22.25736 c -25.797,15.4485 -68.46306,28.21179 -104.01627,31.50208 z"
+           id="path6"
+           style="fill:#127cc1;fill-opacity:1" />
+        <path
+           d="m 238.31142,45.347552 -15.158,0 0,67.812448 c 0,7.9644 3.80425,14.89143 15.158,15.98959"
+           id="path8"
+           style="fill:#127cc1;fill-opacity:1" />
+        <path
+           d="m 57.729915,70.130433 -15.158995,0 0,44.291497 c 0,7.96741 3.804254,14.89193 15.158995,15.98959"
+           id="path10"
+           style="fill:#127cc1;fill-opacity:1" />
+        <rect
+           width="15.158995"
+           height="14.425744"
+           x="42.570919"
+           y="47.40823"
+           id="rect12"
+           style="fill:#127cc1;fill-opacity:1" />
+        <path
+           d="m 148.57135,129.69867 c -12.29105,0 -17.47276,-8.57376 -17.47276,-17.0355 l 0,-58.825247 14.99344,0 0,16.29251 11.35424,0 0,12.199289 -11.35424,0 0,29.426688 c 0,3.46075 1.65354,5.35867 5.23522,5.35867 l 6.11902,0 0,12.58359 -8.87492,0"
+           id="path14"
+           style="fill:#127cc1;fill-opacity:1" />
+        <path
+           d="m 188.42548,81.588742 c -5.12519,0 -9.093,2.664513 -10.74754,6.264418 -0.99183,2.169689 -1.32344,3.818934 -1.48699,6.485456 l 23.20664,0 C 199.06648,87.82553 196.14302,81.588742 188.42548,81.588742 m -12.23453,23.025128 c 0,7.72126 4.84809,13.40595 13.33739,13.40595 6.6712,0 9.97829,-1.86827 13.83706,-5.68419 l 9.26105,8.92893 c -5.95346,5.87811 -12.18201,9.45088 -23.20664,9.45088 -14.38624,0 -28.16829,-7.88553 -28.16829,-30.8564 0,-19.64425 12.01646,-30.743874 27.83718,-30.743874 16.04078,0 25.24481,12.995527 25.24481,30.058656 l 0,5.440548 -38.14256,0"
+           id="path16"
+           style="fill:#127cc1;fill-opacity:1" />
+        <path
+           d="m 98.576374,82.329722 c 4.408956,0 6.228556,2.171196 6.228556,5.715339 l 0,41.735489 15.04895,0 0,-41.790246 c 0,-8.490371 -4.52049,-17.860373 -17.69433,-17.860373 l -31.034221,0 0,59.650119 14.99344,0 0,-47.450831"
+           id="path18"
+           style="fill:#127cc1;fill-opacity:1" />
+        <text
+           x="244.26051"
+           y="55.85825"
+           transform="scale(1.0107951,0.9893202)"
+           id="text2177"
+           xml:space="preserve"
+           style="font-size:14.03530121px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#127cc1;fill-opacity:1;stroke:none;font-family:Arial"><tspan
+             x="244.26051"
+             y="55.85825"
+             id="tspan2179">®</tspan></text>
+      </g>
+    </svg>
+</g>
+<!--@+node:gcross.20110702143210.1154: *3* amd-->
+  <g
+     transform="matrix(0.74999839,0,0,0.74999839,256.60103,525.53234)"
+     id="amd"
+     style="overflow:visible">
+    <polyline
+       style="fill:#009a66"
+       transform="matrix(0.5,0,0,0.5,294.95741,142.56945)"
+       id="polyline26318"
+       points="1165.47,92.779 1165.39,203.495 1281.63,203.513 1198.44,286.826 1081.79,286.954 1080.38,176.065 1165.47,92.779" />
+    <polyline
+       style="fill:#009a66"
+       transform="matrix(0.5,0,0,0.5,294.95741,142.56945)"
+       id="polyline26320"
+       points="1165.39,84.082 1285.07,83.854 1284.83,202.972 1368.99,286.954 1368.75,0.12 1081.79,0 1165.39,84.082" />
+    <polyline
+       transform="matrix(0.5,0,0,0.5,294.95741,142.56945)"
+       id="polyline26322"
+       points="597.986,2.5 509.399,104.746 417.975,2.234 352.661,2.087 352.661,284.857 427.295,284.857 428.284,116.666 507.422,202.826 512.622,202.826 589.105,114.396 590.058,284.857 664.545,284.857 664.453,2.087 597.986,2.5" />
+    <path
+       d="m 354.86941,232.15845 19.0245,-49.997 20.444,49.997 h -39.4685 m 39.7525,-88.5365 -42.3065,0.1975 -57.358,141.1785 h 38.617 l 9.9335,-25.978 h 62.1915 l 11.362,25.978 h 39.743 l -62.1825,-141.376 z"
+       id="path26324" />
+    <path
+       d="m 706.73391,257.78845 c -10.455,0.179 -18.365,0.481 -18.365,0.481 l -0.1365,-86.618 c 0,0 9.182,-0.1375 17.916,-0.234 20.197,-0.224 50.7935,3.9645 51.078,40.567 0.3105,40.0595 -29.985,45.4425 -50.4925,45.804 m -3.1765,-114.102 -51.6355,-0.0735 v 141.385 c 0,0 45.6755,0.0365 46.8205,0 66.76,-1.7165 95.937,-18.9285 96.248,-65.3545 0.2665,-37.848 -11.041,-75.957 -91.433,-75.957 z"
+       id="path26326" />
+    <path
+       d="m 44.906341,0.99968907 c -24.32279,0 -43.9063389,19.58355993 -43.9063389,43.90633993 l 0,23.90631 c 0,24.322789 20.0292549,48.541271 43.9063389,43.906351 l 103.031489,0 141.0628,82.09394 -74.12516,-82.09394 67.18764,0 c 24.3228,0 43.9063,-19.583572 43.9063,-43.906351 l 0,-23.90631 c 0,-24.32279 -19.5835,-43.90633993 -43.9063,-43.90633993 z"
+       id="path124638"
+       style="fill:#eeeeec;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2.00000429;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
+    <text
+       x="38.127834"
+       y="77.706505"
+       id="text26352"
+       xml:space="preserve"
+       style="font-size:64.00013733px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"><tspan
+         x="38.127834"
+         y="77.706505"
+         id="tspan26354">And me!</tspan></text>
+  </g>
+<!--@+node:gcross.20110702143210.1155: *3* chips-->
+<image
+    id="left_chip"
+    xlink:href="chip-2.jpg"
+    height="320"
+    width="450"
+    y="289"
+    x="41"
+/>
+<image
+    id="right_chip"
+    xlink:href="chip-1.jpg"
+    style="display:inline"
+    height="320"
+    width="450"
+    y="289"
+    x="532.6666"
+/>
+<!--@+node:gcross.20110702143210.1148: *3* title-->
+<style>
+.title {
+    font-size:40px;
+    fill:#ffffff;
+    fill-opacity:white;
+    font-family:Futura;
+    position:fixed;
+}
+</style>
+
+<text
+    id="title_template"
+    x="30.5"
+    y="80.5"
+    class="title"
+/>
 <!--@+node:gcross.20110629122941.1126: *3* title_slide-->
 <g id="title_slide">
   <defs
@@ -266,143 +552,9 @@
     height="768"
     style="fill:grey"
 />
-<!--@+node:gcross.20110629122941.1130: *3* standard_backdrop-->
-<g id="standard_backdrop">
-    <linearGradient
-       x1="485.95532"
-       y1="130"
-       x2="485.95532"
-       y2="-182.48184"
-       id="linearGradient3698"
-       xlink:href="#linearGradient3448"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.9980468,0,0,1,2.0000095,-5e-5)" />
-    <linearGradient
-       id="linearGradient3448">
-      <stop
-         style="stop-color:#000000;stop-opacity:1"
-         offset="0" />
-      <stop
-         style="stop-color:#4f4f4f;stop-opacity:1"
-         offset="0.6122449" />
-      <stop
-         style="stop-color:#aeaeae;stop-opacity:1"
-         offset="1" />
-    </linearGradient>
-  <rect
-     width="1020"
-     height="768"
-     x="3"
-     y="5.1757809e-07"
-     id="rect8707"
-     style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.2330811;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
-  <rect
-     width="1022"
-     height="130"
-     x="2"
-     y="-2.9999999e-05"
-     id="rect3686"
-     style="fill:url(#linearGradient3698);fill-opacity:1;stroke:none;display:inline" />
-</g>
-<!--@+node:gcross.20110629122941.1135: *3* particle-->
-<radialGradient
-    cx="0.4"
-    cy="0.4"
-    r="0.5"
-    fx="0.4"
-    fy="0.4"
-    id="particle_gradient"
-    xlink:href="#blackwhite"
-/>
-<circle
-    id="particle"
-    r="50"
-    style="fill:url(#particle_gradient);fill-opacity:1;stroke:none;display:inline"
-/>
-<!--@+node:gcross.20110629122941.1143: *3* particle_box-->
-<style>
-.particle_box {
-    stroke:#000000;
-    stroke-width:2px;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    stroke-miterlimit:4;
-    stroke-opacity:1;
-    fill:none
-}
-</style>
-
-<rect
-    class="particle_box"
-    width="260"
-    height="260"
-    x="-130"
-    y="-130"
-    id="particle_box"
-/>
-<!--@+node:gcross.20110629122941.1145: *3* shrinking_particle_backdrop-->
-<g id="shrinking_particle_backdrop">
-  <text
-     x="270.9082"
-     y="328"
-     id="text9662"
-     xml:space="preserve"
-     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
-       x="270.9082"
-       y="328"
-       id="tspan9664">Actual size</tspan></text>
-  <text
-     x="749.85352"
-     y="327.88196"
-     id="text9668"
-     xml:space="preserve"
-     style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
-       x="749.85352"
-       y="327.88196"
-       id="tspan9670">Magnified</tspan></text>
-    <use xlink:href="#particle_box" transform="translate(750,480)"/>
-</g>
-<!--@+node:gcross.20110630221000.1145: ** Elements-->
-<!--@+node:gcross.20110630221000.1146: *3* magnification lines-->
-<style>
-.magnification_line {
-    stroke:#000000;
-    stroke-width:1px;
-    stroke-linecap:round;
-    stroke-linejoin:round;
-    stroke-miterlimit:4;
-    stroke-opacity:1;
-    stroke-dasharray:4,4;
-}
-</style>
-
-<line
-    x1="620"
-    y1="350"
-    x2="400"
-    y2="350"
-    class="magnification_line"
-    id="magnification_line_1"
-/>
-
-<line
-    x1="620"
-    y1="610"
-    x2="400"
-    y2="610"
-    class="magnification_line"
-    id="magnification_line_2"
-/>
 <!--@+node:gcross.20110629122941.1138: ** Stylesheets-->
 <style><![CDATA[
     <!--@+others-->
-    <!--@+node:gcross.20110629122941.1132: *3* title-->
-    .title {
-        font-size:40px;
-        fill:#ffffff;
-        font-family:Futura;
-        position:fixed;
-    }
     <!--@-others-->
 ]]></style>
 <!--@-others-->
