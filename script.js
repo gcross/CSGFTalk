@@ -379,10 +379,14 @@ window.addEventListener("load",function() {
             )
             return [parallel.apply(null,unfades),""]
         })()).concat([
+        hireUseActor("globe"),
         hireUseActor("i_hate_quantum_computers"),
-        set("i_hate_quantum_computers","x",514.9845),
-        set("i_hate_quantum_computers","y",450.625),
-        linear(1.5,"i_hate_quantum_computers","scale",0,1),
+        set("globe","x",514.9845),
+        set("globe","y",450.625),
+        parallel(
+            linear(1.5,"globe","scale",0,1.4179688),
+            sequence(wait(1),fadeIn(.5,"i_hate_quantum_computers"))
+        ),
         "",
         //@-others
         //@-<< Script >>

@@ -109,62 +109,6 @@
     width="1024"
     height="768"
 />
-<!--@+node:gcross.20110702233701.1170: *3* globe-->
-  <g
-     id="globe">
-    <image
-       xlink:href="globe.png"
-       height="357.64191"
-       width="360"
-    />
-    <path
-       d="m 220,148.82093 60,-70 c 0,0 20,30 -10,60 -30,30 -50,10 -50,10 z"
-       id="path65343"
-       style="fill:#ffffff;fill-opacity:1;stroke:none" />
-    <path
-       d="m 228.55328,138.72767 18.9068,-21.99121 c 0,0 16.40814,43.12993 -0.77121,32.88933 -17.17936,-10.2406 -18.13559,-10.89812 -18.13559,-10.89812 z"
-       id="path65853"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <path
-       d="m 138.53061,148.82093 -60,-70 c 0,0 -20,30 10,60 30,30 50,10 50,10 z"
-       id="path65871"
-       style="fill:#ffffff;fill-opacity:1;stroke:none" />
-    <path
-       d="m 129.97733,138.72767 -18.9068,-21.99121 c 0,0 -16.40814,43.12993 0.77121,32.88933 17.17936,-10.2406 18.13559,-10.89812 18.13559,-10.89812 z"
-       id="path65873"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-    <path
-       d="m 37.142857,213.82093 c 0,0 95.000003,104.28571 139.285713,102.85714 44.28572,-1.42857 137.14286,-95.71428 137.14286,-95.71428 0,0 -120,-12.85715 -141.42857,-12.14286 -29.69299,0.98977 -135.000003,5 -135.000003,5 z"
-       id="path65894"
-       style="fill:#000000;fill-opacity:1;stroke:none" />
-  </g>
-<!--@+node:gcross.20110702233701.1171: *3* i_hate_quantum_computers-->
-<g id="i_hate_quantum_computers" transform="translate(-514.9845,-450.625)">
-  <g
-     transform="matrix(1.4179688,0,0,1.4179688,246.23501,-838.97887)"
-     id="layer1-1"
-     style="display:inline">
-     <use xlink:href="#globe" 
-         x="0"
-         y="693.53882"
-        width="360"
-        height="357.64191"
-    />
-  </g>
-  <path
-     d="M 75.90625,755.8125 C 51.58351,755.8125 32,736.22898 32,711.90625 L 32,708 c 0,-24.32274 19.583518,-43.90625 43.90625,-43.90625 l 183.03125,0 L 400,522 l -74.125,142.09375 628.1875,0 c 24.32274,0 43.90625,19.58352 43.90625,43.90625 l 0,3.90625 c 0,24.32274 -19.5835,43.90625 -43.90625,43.90625 z"
-     id="path3429"
-     style="fill:#eeeeec;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
-  <text
-     x="516.25"
-     y="729.20483"
-     id="text66112"
-     xml:space="preserve"
-     style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Comic Sans MS;-inkscape-font-specification:Comic Sans MS"><tspan
-       x="516.25"
-       y="729.20483"
-       id="tspan66114">I HATE QUANTUM COMPUTERS!!!</tspan></text>
-</g>
 <!--@+node:gcross.20110702143210.1164: *3* faaaaace-->
   <defs>
     <linearGradient
@@ -324,6 +268,37 @@
     width="337.5"
     height="467.9"
 />
+<!--@+node:gcross.20110702233701.1170: *3* globe-->
+  <g
+     id="globe"
+     transform="translate(-180,-178.820955)"
+  >
+    <image
+       xlink:href="globe.png"
+       width="360"
+       height="357.64191"
+    />
+    <path
+       d="m 220,148.82093 60,-70 c 0,0 20,30 -10,60 -30,30 -50,10 -50,10 z"
+       id="path65343"
+       style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    <path
+       d="m 228.55328,138.72767 18.9068,-21.99121 c 0,0 16.40814,43.12993 -0.77121,32.88933 -17.17936,-10.2406 -18.13559,-10.89812 -18.13559,-10.89812 z"
+       id="path65853"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+    <path
+       d="m 138.53061,148.82093 -60,-70 c 0,0 -20,30 10,60 30,30 50,10 50,10 z"
+       id="path65871"
+       style="fill:#ffffff;fill-opacity:1;stroke:none" />
+    <path
+       d="m 129.97733,138.72767 -18.9068,-21.99121 c 0,0 -16.40814,43.12993 0.77121,32.88933 17.17936,-10.2406 18.13559,-10.89812 18.13559,-10.89812 z"
+       id="path65873"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+    <path
+       d="m 37.142857,213.82093 c 0,0 95.000003,104.28571 139.285713,102.85714 44.28572,-1.42857 137.14286,-95.71428 137.14286,-95.71428 0,0 -120,-12.85715 -141.42857,-12.14286 -29.69299,0.98977 -135.000003,5 -135.000003,5 z"
+       id="path65894"
+       style="fill:#000000;fill-opacity:1;stroke:none" />
+  </g>
 <!--@+node:gcross.20110702143210.1153: *3* intel-->
 <g
     id="intel"
@@ -1970,6 +1945,23 @@
        x="55.377136"
        y="698.68787"
        id="tspan64892">Testing matrix multiplication [Buhrman, Špalek 04]</tspan></text>
+<!--@+node:gcross.20110702233701.1172: *3* Speech bubbles-->
+<!--@+node:gcross.20110702233701.1171: *4* i_hate_quantum_computers-->
+<g id="i_hate_quantum_computers">
+  <path
+     d="M 75.90625,755.8125 C 51.58351,755.8125 32,736.22898 32,711.90625 L 32,708 c 0,-24.32274 19.583518,-43.90625 43.90625,-43.90625 l 183.03125,0 L 400,522 l -74.125,142.09375 628.1875,0 c 24.32274,0 43.90625,19.58352 43.90625,43.90625 l 0,3.90625 c 0,24.32274 -19.5835,43.90625 -43.90625,43.90625 z"
+     id="path3429"
+     style="fill:#eeeeec;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
+  <text
+     x="516.25"
+     y="729.20483"
+     id="text66112"
+     xml:space="preserve"
+     style="font-size:56px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Comic Sans MS;-inkscape-font-specification:Comic Sans MS"><tspan
+       x="516.25"
+       y="729.20483"
+       id="tspan66114">I HATE QUANTUM COMPUTERS!!!</tspan></text>
+</g>
 <!--@+node:gcross.20110629122941.1130: *3* standard_backdrop-->
 <g id="standard_backdrop">
     <linearGradient
