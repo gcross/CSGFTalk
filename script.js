@@ -379,6 +379,11 @@ window.addEventListener("load",function() {
             )
             return [parallel.apply(null,unfades),""]
         })()).concat([
+        hireUseActor("i_hate_quantum_computers"),
+        set("i_hate_quantum_computers","x",514.9845),
+        set("i_hate_quantum_computers","y",450.625),
+        linear(1.5,"i_hate_quantum_computers","scale",0,1),
+        "",
         //@-others
         //@-<< Script >>
     ]))
