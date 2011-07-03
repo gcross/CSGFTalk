@@ -261,9 +261,124 @@ window.addEventListener("load",function() {
         "",
         fadeOut(0.5,"huge_one"),
         parallel(
-            fadeOut(0.5,"huge_zero"),
+            fadeIn(0.5,"huge_zero"),
             fadeIn(0.5,"huge_one")
         ),
+        "",
+        hireUseActor("two_digits_top_row"),
+        hireUseActor("two_digits_bottom_row"),
+        parallel(
+            fadeOut(1,"huge_zero"),
+            fadeOut(1,"huge_one"),
+            fadeIn(1,"two_digits_bottom_row"),
+            fadeIn(1,"two_digits_top_row"),
+            decelerate(1,"two_digits_bottom_row","y",-140,0),
+            decelerate(1,"two_digits_top_row","y",140,0)
+        ),
+        fire("huge_zero","huge_one"),
+        "",
+        hireUseActor("three_digits_top_row"),
+        hireUseActor("three_digits_bottom_row"),
+        parallel(
+            fadeOut(1,"two_digits_bottom_row"),
+            fadeOut(1,"two_digits_top_row"),
+            fadeIn(1,"three_digits_bottom_row"),
+            fadeIn(1,"three_digits_top_row"),
+            decelerate(1,"three_digits_bottom_row","y",-70,0),
+            decelerate(1,"three_digits_top_row","y",70,0)
+        ),
+        fire("two_digits_bottom_row","two_digits_top_row"),
+        "",
+        hireUseActor("four_digits_left_column"),
+        hireUseActor("four_digits_right_column"),
+        parallel(
+            fadeOut(1,"three_digits_bottom_row"),
+            fadeOut(1,"three_digits_top_row"),
+            fadeIn(1,"four_digits_left_column"),
+            fadeIn(1,"four_digits_right_column"),
+            decelerate(1,"four_digits_left_column","x",120,0),
+            decelerate(1,"four_digits_right_column","x",-120,0)
+        ),
+        fire("three_digits_bottom_row","three_digits_top_row"),
+        "",
+        hireUseActor("function_applied_to_four_digits"),
+        fadeIn(1,"function_applied_to_four_digits"),
+        "",
+        hireUseActor("eye","four_digits_left_column"),
+        fadeIn(1,"eye"),
+        "",
+        hireUseActor("four_digits_post_measurement"),
+        parallel(
+            fadeOut(1,"four_digits_left_column"),
+            fadeOut(1,"four_digits_right_column"),
+            fadeOut(1,"function_applied_to_four_digits")
+        ),
+        fire("four_digits_left_column","four_digits_right_column"),
+        "",
+        parallel(
+            fadeOut(1,"eye"),
+            fadeOut(1,"four_digits_post_measurement")
+        ),
+        fire("eye","four_digits_post_measurement"),
+        "",
+        ]).concat((function(){
+            var lines = []
+            var entrances = []
+            for(var i = 1; i <= 9; ++i) {
+                var id = "quantum_algorithm_" + i
+                lines.push(hireUseActor(id))
+                lines.push(set(id,"x",1024))
+                entrances.push(
+                    sequence(
+                        wait((i-1)*0.05),
+                        decelerate(0.5,id,"x",0)
+                    )
+                )
+            }
+            lines.push(parallel.apply(null,entrances))
+            lines.push("")
+            return lines
+        })()).concat((function(){
+            var fades = []
+            for(var i = 2; i <= 9; ++i) {
+                (function(){
+                    var id = "quantum_algorithm_" + i
+                    fades.push(linear(1,function(stage) { return stage[id].style; },"opacity",1,0.5))
+                })()
+            }
+            fades.push(
+                function() {
+                    var quantum_algorithm_1 = document.getElementById("quantum_algorithm_1")
+                    return {
+                        duration: 1,
+                        advance: function() { quantum_algorithm_1.setAttribute("stroke-width",1); },
+                        retract: function() { quantum_algorithm_1.setAttribute("stroke-width",0); },
+                        stepTo: function(_,time) { quantum_algorithm_1.setAttribute("stroke-width",time); }
+                    }
+                }
+            )
+            return [parallel.apply(null,fades),""]
+        })()).concat((function(){
+            var unfades = []
+            for(var i = 2; i <= 9; ++i) {
+                (function(){
+                    var id = "quantum_algorithm_" + i
+                    unfades.push(linear(1,function(stage) { return stage[id].style; },"opacity",1))
+                })()
+            }
+            unfades.push(
+                function() {
+                    var quantum_algorithm_1 = document.getElementById("quantum_algorithm_1")
+                    return {
+                        duration: 1,
+                        advance: function() { quantum_algorithm_1.setAttribute("stroke-width",0); },
+                        retract: function() { quantum_algorithm_1.setAttribute("stroke-width",1); },
+                        stepTo: function(_,time) { quantum_algorithm_1.setAttribute("stroke-width",1-time); }
+                    }
+                }
+            )
+            return [parallel.apply(null,unfades),""]
+        })()).concat([
         //@-others
         //@-<< Script >>
     ]))
