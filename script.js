@@ -54,6 +54,23 @@ appendToMethod(MagnifiedBoxActor.prototype,"clearNode",function() {
     delete this.right_particle
 })
 augmentWithStyleBehavior(MagnifiedBoxActor)
+//@+node:gcross.20110702143210.1162: ** Functions
+//@+node:gcross.20110702143210.1163: *3* rotateTitle
+function rotateTitle(index) {
+    return [
+        parallel(
+            accelerate(0.25,titles[index-1],"y",-50),
+            fadeOut(0.25,titles[index-1])
+        ),
+        fire(titles[index-1]),
+        hireUseActor(titles[index]),
+        set(titles[index],"y",-50),
+        parallel(
+            decelerate(0.25,titles[index],"y",0),
+            fadeIn(0.25,titles[index])
+        ),
+    ]
+}
 //@-others
 
 var titles = [
@@ -61,6 +78,7 @@ var titles = [
     //@+node:gcross.20110629122941.1134: ** << Titles >>
     "Quantum mechanics is fuzzy",
     "But who actually makes things that small?",
+    "Quantum computing: embrace the fuzz!",
     //@-<< Titles >>
 ]
 
@@ -77,7 +95,7 @@ window.addEventListener("load",function() {
         }
     })()
 
-    initializeSlick([
+    initializeSlick([].concat([
         //@+<< Script >>
         //@+node:gcross.20110629122941.1129: ** << Script >>
         //@+others
@@ -115,17 +133,7 @@ window.addEventListener("load",function() {
         ),
         "",
         //@+node:gcross.20110702143210.1152: *3* But who actually makes things that small?
-        parallel(
-            accelerate(0.25,titles[0],"y",-50),
-            fadeOut(0.25,titles[0])
-        ),
-        fire(titles[0]),
-        hireUseActor(titles[1]),
-        set(titles[1],"y",-50),
-        parallel(
-            decelerate(0.25,titles[1],"y",0),
-            fadeIn(0.25,titles[1])
-        ),
+        ]).concat(rotateTitle(1)).concat([
         "",
         hireUseActor("intel"),
         set("intel","x",512),
@@ -196,8 +204,18 @@ window.addEventListener("load",function() {
             )
         ),
         "",
+        //@+node:gcross.20110702143210.1161: *3* Quantum computing: embrace the fuzz!
+        ]).concat(rotateTitle(2)).concat([
+        "",
+        hireUseActor("whitescreen","magnified_box"),
+        parallel(
+            fadeOut(1,"magnified_box"),
+            fadeOut(1,"whitescreen")
+        ),
+        fire("whitescreen","magnified_box"),
+        "",
         //@-others
         //@-<< Script >>
-    ])
+    ]))
 },false)
 //@-leo
