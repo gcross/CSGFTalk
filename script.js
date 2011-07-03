@@ -230,6 +230,8 @@ window.addEventListener("load",function() {
         ]).concat(rotateTitle(2)).concat([
         "",
         hireUseActor("whitescreen","shrinking_particle_backdrop"),
+        hireUseActor("glass_half_empty","whitescreen"),
+        hireUseActor("glass_half_full","glass_half_empty"),
         hire("faaaaace",new FaaaaaceActor(),"whitescreen"),
         parallel(
             fadeOut(1,"shrinking_particle_backdrop"),
@@ -238,7 +240,10 @@ window.addEventListener("load",function() {
         ),
         fire("whitescreen","magnified_box","shrinking_particle_backdrop"),
         "",
-        linear(1,"faaaaace","unhappiness",-1),
+        parallel(
+            linear(0.5,"faaaaace","unhappiness",-1),
+            fadeOut(1,"glass_half_empty")
+        ),
         //@-others
         //@-<< Script >>
     ]))

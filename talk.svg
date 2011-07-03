@@ -243,6 +243,24 @@
        style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none" />
   </g>
 </g>
+<!--@+node:gcross.20110702233701.1160: *3* glasses-->
+<image
+    id="glass_half_empty"
+    xlink:href="glass_half_empty.png"
+    x="97"
+    y="222"
+    width="337.5"
+    height="467.9"
+/>
+
+<image
+    id="glass_half_full"
+    xlink:href="glass_half_full.png"
+    x="97"
+    y="222"
+    width="337.5"
+    height="467.9"
+/>
 <!--@+node:gcross.20110702143210.1153: *3* intel-->
 <g
     id="intel"
