@@ -145,6 +145,7 @@ window.addEventListener("load",function() {
         decelerate(0.5,"amd","y",0),
         "",
         decelerate(0.5,"amd","y",250),
+        fire("amd"),
         "",
         hireUseActor("left_chip"),
         set("left_chip","x",-500),
@@ -153,6 +154,51 @@ window.addEventListener("load",function() {
         hireUseActor("right_chip"),
         set("right_chip","x",500),
         decelerate(0.5,"right_chip","x",0),
+        "",
+        hireUseActor("whitescreen","intel"),
+        hireUseActor("shrinking_particle_backdrop","whitescreen"),
+        hire("magnified_box",new MagnifiedBoxActor("electron_box"),"whitescreen"),
+        parallel(
+            fadeOut(1,"intel"),
+            fadeOut(1,"left_chip"),
+            fadeOut(1,"right_chip"),
+            fadeOut(1,"whitescreen")
+        ),
+        fire("whitescreen"),
+        fire("intel"),
+        fire("left_chip"),
+        fire("right_chip"),
+        "",
+        parallel(
+            decelerate(10,"magnified_box","magnification",0),
+            sequence(
+                wait(4),
+                accelerate(6,"magnified_box","particle_y",60)
+            ),
+            sequence(
+                wait(6),
+                function() {
+                    var top_current = document.getElementById("top_current")
+                    var bottom_current = document.getElementById("bottom_current")
+                    return {
+                        duration: 4,
+                        advance: function() {
+                            top_current.setAttribute("opacity",0.5)
+                            bottom_current.setAttribute("opacity",0.5)
+                        },
+                        retract: function() {
+                            top_current.setAttribute("opacity",1)
+                            bottom_current.setAttribute("opacity",0)
+                        },
+                        stepTo: function(_,time) {
+                            var t = time/this.duration
+                            top_current.setAttribute("opacity",1-0.5*t)
+                            bottom_current.setAttribute("opacity",0.5*t)
+                        }
+                    }
+                }
+            )
+        ),
         "",
         //@-others
         //@-<< Script >>
