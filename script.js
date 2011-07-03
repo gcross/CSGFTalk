@@ -229,21 +229,23 @@ window.addEventListener("load",function() {
         //@+node:gcross.20110702143210.1161: *3* Quantum computing: embrace the fuzz!
         ]).concat(rotateTitle(2)).concat([
         "",
-        hireUseActor("whitescreen","shrinking_particle_backdrop"),
-        hireUseActor("glass_half_empty","whitescreen"),
-        hireUseActor("glass_half_full","glass_half_empty"),
-        hire("faaaaace",new FaaaaaceActor(),"whitescreen"),
+        hireUseActor("glass_half_empty"),
+        hire("faaaaace",new FaaaaaceActor()),
         parallel(
             fadeOut(1,"shrinking_particle_backdrop"),
             fadeOut(1,"magnified_box"),
-            fadeOut(1,"whitescreen")
+            fadeIn(1,"faaaaace"),
+            fadeIn(1,"glass_half_empty")
         ),
-        fire("whitescreen","magnified_box","shrinking_particle_backdrop"),
+        fire("magnified_box","shrinking_particle_backdrop"),
         "",
+        hireUseActor("glass_half_full","glass_half_empty"),
         parallel(
             linear(0.5,"faaaaace","unhappiness",-1),
             fadeOut(1,"glass_half_empty")
         ),
+        fire("glass_half_empty"),
+        "",
         //@-others
         //@-<< Script >>
     ]))
