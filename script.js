@@ -101,6 +101,7 @@ var titles = [
     "Quantum mechanics is fuzzy",
     "But who actually makes things that small?",
     "Quantum computing: embrace the fuzz!",
+    "How quantum computers die",
     //@-<< Titles >>
 ]
 
@@ -130,11 +131,10 @@ window.addEventListener("load",function() {
         hireUseActor("shrinking_particle_backdrop","title_slide"),
         hire("magnified_box",new MagnifiedBoxActor("particle_box"),"title_slide"),
         hireUseActor("grey_rectangle","title_slide"),
-        parallel(
-            fadeOut(1,"grey_rectangle"),
-            fadeOut(1,"title_slide")
+        fadeOutAndFire(1,
+            "grey_rectangle",
+            "title_slide"
         ),
-        fire("title_slide","grey_rectangle"),
         "",
         decelerate(10,"magnified_box","magnification",0),
         "",
@@ -143,8 +143,7 @@ window.addEventListener("load",function() {
         smooth(0.5,"magnified_box","particle_y",+65),
         hire("magnified_box2",new MagnifiedBoxActor("particle_box2"),"magnified_box"),
         set("magnified_box2","particle_y",+65),
-        fadeOut(0.5,"magnified_box"),
-        fire("magnified_box"),
+        fadeOutAndFire(0.5,"magnified_box"),
         "",
         parallel(
             decelerate(10,"magnified_box2","magnification",0),
@@ -162,12 +161,12 @@ window.addEventListener("load",function() {
         set("intel","y",480),
         set("intel","scale",0),
         parallel(
-            fadeOut(1,"magnified_box2"),
-            fadeOut(1,"shrinking_particle_backdrop"),
+            fadeOutAndFire(1,
+                "magnified_box2",
+                "shrinking_particle_backdrop"
+            ),
             linear(2,"intel","scale",1.5)
         ),
-        fire("magnified_box2"),
-        fire("shrinking_particle_backdrop"),
         "",
         hireUseActor("amd"),
         set("amd","y",250),
@@ -187,13 +186,12 @@ window.addEventListener("load",function() {
         hireUseActor("whitescreen","intel"),
         hireUseActor("shrinking_particle_backdrop","whitescreen"),
         hire("magnified_box",new MagnifiedBoxActor("electron_box"),"whitescreen"),
-        parallel(
-            fadeOut(1,"intel"),
-            fadeOut(1,"left_chip"),
-            fadeOut(1,"right_chip"),
-            fadeOut(1,"whitescreen")
+        fadeOutAndFire(1,
+            "intel",
+            "left_chip",
+            "right_chip",
+            "whitescreen"
         ),
-        fire("whitescreen","intel","left_chip","right_chip"),
         "",
         parallel(
             decelerate(10,"magnified_box","magnification",0),
@@ -229,34 +227,31 @@ window.addEventListener("load",function() {
         //@+node:gcross.20110702143210.1161: *3* Quantum computing: embrace the fuzz!
         ]).concat(rotateTitle(2)).concat([
         "",
-        hireUseActor("glass_half_empty"),
-        hire("faaaaace",new FaaaaaceActor()),
         parallel(
-            fadeOut(1,"shrinking_particle_backdrop"),
-            fadeOut(1,"magnified_box"),
-            fadeIn(1,"faaaaace"),
-            fadeIn(1,"glass_half_empty")
+            fadeOutAndFire(1,
+                "shrinking_particle_backdrop",
+                "magnified_box"
+            ),
+            hireAndFadeInUseActor(1,"glass_half_empty"),
+            hireAndFadeIn(1,"faaaaace",new FaaaaaceActor())
         ),
-        fire("magnified_box","shrinking_particle_backdrop"),
         "",
         hireUseActor("glass_half_full","glass_half_empty"),
         parallel(
             linear(0.5,"faaaaace","unhappiness",-1),
-            fadeOut(1,"glass_half_empty")
+            fadeOutAndFire(1,"glass_half_empty")
         ),
-        fire("glass_half_empty"),
         "",
-        hireUseActor("huge_zero","glass_half_full"),
         parallel(
+            fadeOutAndFire(1,"faaaaace"),
             fadeOut(1,"glass_half_full"),
-            fadeOut(1,"faaaaace"),
-            fadeIn(1,"huge_zero")
+            hireAndFadeInUseActor(1,"huge_zero","glass_half_full")
         ),
+        fire("glass_half_full"),
         "",
-        hireUseActor("huge_one"),
         parallel(
             fadeOut(0.5,"huge_zero"),
-            fadeIn(0.5,"huge_one")
+            hireAndFadeInUseActor(0.5,"huge_one")
         ),
         "",
         fadeOut(0.5,"huge_one"),
@@ -265,61 +260,66 @@ window.addEventListener("load",function() {
             fadeIn(0.5,"huge_one")
         ),
         "",
-        hireUseActor("two_digits_top_row"),
-        hireUseActor("two_digits_bottom_row"),
+        hireUseActors(
+            "two_digits_bottom_row",
+            "two_digits_top_row"
+        ),
         parallel(
-            fadeOut(1,"huge_zero"),
-            fadeOut(1,"huge_one"),
+            fadeOutAndFire(1,
+                "huge_zero",
+                "huge_one"
+            ),
             fadeIn(1,"two_digits_bottom_row"),
             fadeIn(1,"two_digits_top_row"),
             decelerate(1,"two_digits_bottom_row","y",-140,0),
             decelerate(1,"two_digits_top_row","y",140,0)
         ),
-        fire("huge_zero","huge_one"),
         "",
-        hireUseActor("three_digits_top_row"),
-        hireUseActor("three_digits_bottom_row"),
+        hireUseActors(
+            "three_digits_top_row",
+            "three_digits_bottom_row"
+        ),
         parallel(
-            fadeOut(1,"two_digits_bottom_row"),
-            fadeOut(1,"two_digits_top_row"),
+            fadeOutAndFire(1,
+                "two_digits_bottom_row",
+                "two_digits_top_row"
+            ),
             fadeIn(1,"three_digits_bottom_row"),
             fadeIn(1,"three_digits_top_row"),
             decelerate(1,"three_digits_bottom_row","y",-70,0),
             decelerate(1,"three_digits_top_row","y",70,0)
         ),
-        fire("two_digits_bottom_row","two_digits_top_row"),
         "",
-        hireUseActor("four_digits_left_column"),
-        hireUseActor("four_digits_right_column"),
+        hireUseActors(
+            "four_digits_left_column",
+            "four_digits_right_column"
+        ),
         parallel(
-            fadeOut(1,"three_digits_bottom_row"),
-            fadeOut(1,"three_digits_top_row"),
+            fadeOutAndFire(1,
+                "three_digits_bottom_row",
+                "three_digits_top_row"
+            ),
             fadeIn(1,"four_digits_left_column"),
             fadeIn(1,"four_digits_right_column"),
             decelerate(1,"four_digits_left_column","x",120,0),
             decelerate(1,"four_digits_right_column","x",-120,0)
         ),
-        fire("three_digits_bottom_row","three_digits_top_row"),
         "",
-        hireUseActor("function_applied_to_four_digits"),
-        fadeIn(1,"function_applied_to_four_digits"),
+        hireAndFadeInUseActor(1,"function_applied_to_four_digits"),
         "",
-        hireUseActor("eye","four_digits_left_column"),
-        fadeIn(1,"eye"),
+        hireAndFadeInUseActor(1,"eye","four_digits_left_column"),
         "",
         hireUseActor("four_digits_post_measurement"),
-        parallel(
-            fadeOut(1,"four_digits_left_column"),
-            fadeOut(1,"four_digits_right_column"),
-            fadeOut(1,"function_applied_to_four_digits")
+        fadeOutAndFire(1,
+            "four_digits_left_column",
+            "four_digits_right_column",
+            "function_applied_to_four_digits"
         ),
-        fire("four_digits_left_column","four_digits_right_column"),
         "",
-        parallel(
-            fadeOut(1,"eye"),
-            fadeOut(1,"four_digits_post_measurement")
+        fadeOutAndFire(1,
+            "eye",
+            "four_digits_post_measurement"
         ),
-        fire("eye","four_digits_post_measurement"),
         "",
         ]).concat((function(){
             var lines = []
@@ -388,6 +388,21 @@ window.addEventListener("load",function() {
             sequence(wait(1),fadeIn(.5,"i_hate_quantum_computers"))
         ),
         "",
+        fadeOutAndFire.apply(null,(function(){
+            var arguments = [1]
+            for(var i = 1; i <= 9; ++i) { arguments.push("quantum_algorithm_" + i); }
+            arguments.push("i_hate_quantum_computers")
+            return arguments
+        })()),
+        parallel(
+            smooth(1,"globe","x",233.61645),
+            smooth(1,"globe","y",438.0),
+            smooth(1,"globe","scale",0.79760745)
+        ),
+        hireAndFadeInUseActor(0.5,"quantum_computer"),
+        "",
+        //@+node:gcross.20110702233701.1174: *3* How quantum computers die
+        ]).concat(rotateTitle(3)).concat([
         //@-others
         //@-<< Script >>
     ]))
