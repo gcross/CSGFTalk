@@ -70,7 +70,7 @@ function makeFaaaaaceActor() {
 //@+node:gcross.20110702143210.1162: ** Functions
 //@+node:gcross.20110702143210.1163: *3* rotateTitle
 function rotateTitle(index) {
-    return [
+    return sequence(
         parallel(
             accelerate(0.25,titles[index-1],"y",-50),
             fadeOut(0.25,titles[index-1])
@@ -81,8 +81,8 @@ function rotateTitle(index) {
         parallel(
             decelerate(0.25,titles[index],"y",0),
             fadeIn(0.25,titles[index])
-        ),
-    ]
+        )
+    )
 }
 //@-others
 
@@ -145,7 +145,7 @@ window.addEventListener("load",function() {
         ),
         "",
         //@+node:gcross.20110702143210.1152: *3* But who actually makes things that small?
-        ]).concat(rotateTitle(1)).concat([
+        rotateTitle(1),
         "",
         hireUseActor("intel"),
         set("intel","x",512),
@@ -216,7 +216,7 @@ window.addEventListener("load",function() {
         ),
         "",
         //@+node:gcross.20110702143210.1161: *3* Quantum computing: embrace the fuzz!
-        ]).concat(rotateTitle(2)).concat([
+        rotateTitle(2),
         "",
         parallel(
             fadeOutAndFire(1,
@@ -393,7 +393,8 @@ window.addEventListener("load",function() {
         hireAndFadeInUseActor(0.5,"quantum_computer"),
         "",
         //@+node:gcross.20110702233701.1174: *3* How quantum computers die
-        ]).concat(rotateTitle(3)).concat([
+        rotateTitle(3),
+        "",
         //@-others
         //@-<< Script >>
     ]))
