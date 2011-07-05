@@ -55,27 +55,18 @@ appendToMethod(MagnifiedBoxActor.prototype,"clearNode",function() {
 })
 augmentWithStyleBehavior(MagnifiedBoxActor)
 //@+node:gcross.20110702233701.1159: *3* FaaaaaceActor
-function FaaaaaceActor() {
-    this.actor = new UseActor("faaaaace")
-    this.style = {}
-    this.mouth = document.getElementById("mouth")
-    this.teardrop = document.getElementById("teardrop")
-}
-FaaaaaceActor.prototype = Object.create(ActorPrototype)
-augment(FaaaaaceActor,{
-    unhappiness: 1
-,   createNode: function() {
-        return this.actor.getNode()
-    }
-,   update: function() {
+function makeFaaaaaceActor() {
+    var actor = new UseActor("faaaaace")
+    actor.mouth = document.getElementById("mouth")
+    actor.teardrop = document.getElementById("teardrop")
+    actor.unhappiness = 1
+    appendToMethod(actor,"update",function() {
         this.teardrop.setAttribute("opacity",1-(1-this.unhappiness)/2)
         this.mouth.setAttribute("transform","translate(+738,+494)scale(1," + this.unhappiness + ")translate(-738,-494)")
-    }
-,   clearNode: function() {
-        this.actor.clearNode()
-    }
-})
-augmentWithStyleBehavior(FaaaaaceActor)
+    })
+    return actor
+}
+//@+node:gcross.20110702233701.1176: *3* QuantumComputerActor
 //@+node:gcross.20110702143210.1162: ** Functions
 //@+node:gcross.20110702143210.1163: *3* rotateTitle
 function rotateTitle(index) {
@@ -233,7 +224,7 @@ window.addEventListener("load",function() {
                 "magnified_box"
             ),
             hireAndFadeInUseActor(1,"glass_half_empty"),
-            hireAndFadeIn(1,"faaaaace",new FaaaaaceActor())
+            hireAndFadeIn(1,"faaaaace",makeFaaaaaceActor())
         ),
         "",
         hireUseActor("glass_half_full","glass_half_empty"),
