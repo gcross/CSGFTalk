@@ -2032,22 +2032,11 @@
     <filter
        color-interpolation-filters="sRGB"
        id="filter34750">
-      <feFlood
-         result="result1"
-         flood-opacity="0"
-         flood-color="rgb(255,0,0)"
-         id="quantum_computer_blood" />
-      <feBlend
-         in2="SourceGraphic"
-         mode="multiply"
-         in="result1"
-         result="result3"
-         id="feBlend34756" />
-      <feComposite
-         in2="SourceGraphic"
-         operator="in"
-         result="result4"
-         id="feComposite34758" />
+      <feColorMatrix
+         id="quantum_computer_blood"
+         type="matrix"
+         values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"
+      />
     </filter>
     <radialGradient
        cx="2650"

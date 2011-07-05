@@ -74,7 +74,8 @@ function makeQuantumComputerActor() {
     actor.blood = document.getElementById("quantum_computer_blood")
     actor.top = document.getElementById("quantum_computer_top")
     appendToMethod(actor,"update",function() {
-        this.blood.setAttribute("flood-opacity",this.damage*0.75)
+        var amplitude = 1-this.damage*0.75
+        this.blood.setAttribute("values","1 0 0 0 0  0 " + amplitude + " 0 0 0  0 0 " + amplitude + " 0 0  0 0 0 1 0")
         this.top.setAttribute("x1",902.625-281.25*Math.cos(Math.PI/4*this.open))
         this.top.setAttribute("y1",328.625-281.25*Math.sin(Math.PI/4*this.open))
     })
