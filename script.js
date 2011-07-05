@@ -512,6 +512,29 @@ window.addEventListener("load",function() {
         //@+node:gcross.20110702233701.1179: *3* Classical error correction
         rotateTitle(4),
         "",
+        hireAndFadeInUseActor(1,"middle_bit_zero"),
+        "",
+        parallel(
+            sequence(
+                hireUseActor("middle_bit_lightning_bolt","globe"),
+                parallel(
+                    accelerate(0.75,"middle_bit_lightning_bolt","x",382.232),
+                    accelerate(0.75,"middle_bit_lightning_bolt","y",-333.75)
+                ),
+                fire("middle_bit_lightning_bolt")
+            ),
+            sequence(
+                wait(0.5),
+                hireAndFadeInUseActor(0.1,"middle_bit_explosion"),
+                hireUseActor("middle_bit_one","middle_bit_explosion"),
+                fire("middle_bit_zero"),
+                parallel(
+                    fadeIn(1,"middle_bit_one"),
+                    fadeOut(1,"middle_bit_explosion")
+                )
+            )
+        ),
+        "",
         //@-others
         //@-<< Script >>
     ]))
