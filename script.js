@@ -81,6 +81,14 @@ function makeQuantumComputerActor() {
     })
     return actor
 }
+
+function showQuantumComputer() {
+    return set(function(stage) { return stage.quantum_computer.style; },"opacity",1)
+}
+
+function hideQuantumComputer() {
+    return set(function(stage) { return stage.quantum_computer.style; },"opacity",0)
+}
 //@+node:gcross.20110702143210.1162: ** Functions
 //@+node:gcross.20110702143210.1163: *3* rotateTitle
 function rotateTitle(index) {
@@ -130,6 +138,12 @@ window.addEventListener("load",function() {
         //@+others
         //@+node:gcross.20110702143210.1151: *3* Title
         hireUseActor("title_slide"),
+
+        //@+at
+        // Hack to work around Chrome filter bug.
+        //@@c
+        hire("quantum_computer",makeQuantumComputerActor()),
+        hideQuantumComputer(),
         //@+node:gcross.20110702143210.1150: *3* Quantum mechanics is fuzzy
         "",
         hireUseActor("standard_backdrop","title_slide"),
@@ -409,7 +423,9 @@ window.addEventListener("load",function() {
             smooth(1,"globe","y",438.0),
             smooth(1,"globe","scale",0.79760745)
         ),
-        hireAndFadeIn(0.5,"quantum_computer",makeQuantumComputerActor()),
+        showQuantumComputer(),
+        moveToEnd("quantum_computer"),
+        fadeIn(0.5,"quantum_computer"),
         "",
         //@+node:gcross.20110702233701.1174: *3* How quantum computers die
         rotateTitle(3),
@@ -484,9 +500,9 @@ window.addEventListener("load",function() {
             "lightning_bolt_3",
             "lightning_bolt_cover",
             "lightning_bolt_shield",
-            "quantum_computer",
             "whitescreen"
         ),
+        hideQuantumComputer(),
         parallel(
             smooth(1,"globe","x",129.768),
             smooth(1,"globe","y",641.3125),
