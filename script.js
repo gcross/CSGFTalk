@@ -106,6 +106,7 @@ var titles = [
     "But who actually makes things that small?",
     "Quantum computing: embrace the fuzz!",
     "How quantum computers die",
+    "Classical error correction",
     //@-<< Titles >>
 ]
 
@@ -412,8 +413,87 @@ window.addEventListener("load",function() {
         //@+node:gcross.20110702233701.1174: *3* How quantum computers die
         rotateTitle(3),
         "",
-        linear(0.1,"quantum_computer","damage",1),
-        linear(0.5,"quantum_computer","damage",0),
+        hire("lightning_bolt_1",new UseActor("lightning_bolt"),"globe"),
+        hire("lightning_bolt_2",new UseActor("lightning_bolt"),"globe"),
+        set("lightning_bolt_2","y",-50),
+        hire("lightning_bolt_3",new UseActor("lightning_bolt"),"globe"),
+        set("lightning_bolt_3","y",+50),
+        parallel(
+            accelerate(0.75,"lightning_bolt_1","x",560),
+            sequence(wait(0.5),accelerate(0.75,"lightning_bolt_2","x",560)),
+            sequence(wait(1.0),accelerate(0.75,"lightning_bolt_3","x",560)),
+            sequence(
+                wait(0.5),
+                linear(0.1,"quantum_computer","damage",1),
+                linear(0.4,"quantum_computer","damage",0.2),
+                linear(0.1,"quantum_computer","damage",1),
+                linear(0.4,"quantum_computer","damage",0.2),
+                linear(0.1,"quantum_computer","damage",1),
+                linear(0.5,"quantum_computer","damage",0)
+            )
+        ),
+        fire("lightning_bolt_1","lightning_bolt_2","lightning_bolt_3"),
+        "",
+        parallel(
+            smooth(1,"globe","x",453.61645),
+            smooth(1,"globe","y",298.0)
+        ),
+        parallel(
+            smooth(1,"quantum_computer","open",1),
+            linear(1,"quantum_computer","damage",1)
+        ),
+        "",
+        parallel(
+            smooth(1,"globe","x",233.61645),
+            smooth(1,"globe","y",438.0),
+            smooth(1,"quantum_computer","open",0),
+            linear(1,"quantum_computer","damage",0)
+        ),
+        "",
+        hireAndFadeInUseActor(1,"lightning_bolt_shield","globe"),
+        hireUseActor("lightning_bolt_cover","globe"),
+        "",
+        hire("lightning_bolt_1",new UseActor("lightning_bolt"),"lightning_bolt_cover"),
+        set("lightning_bolt_1","y",-50),
+        hire("lightning_bolt_2",new UseActor("lightning_bolt"),"lightning_bolt_cover"),
+        set("lightning_bolt_2","y",+50),
+        hire("lightning_bolt_3",new UseActor("lightning_bolt"),"globe"),
+        parallel(
+            linear(0.3,"lightning_bolt_1","x",240),
+            sequence(
+                wait(0.5),
+                linear(0.3,"lightning_bolt_2","x",240)
+            ),
+            sequence(
+                wait(1),
+                linear(0.3,"lightning_bolt_3","x",240),
+                linear(0.15,"lightning_bolt_3","x",360)
+            ),
+            sequence(
+                wait(1.45),
+                linear(0.1,"quantum_computer","damage",1)
+            )
+        ),
+        "",
+        moveToEnd("globe"),
+        hireAndFadeInUseActor(1,"whitescreen","globe"),
+        fire(
+            "lightning_bolt_1",
+            "lightning_bolt_2",
+            "lightning_bolt_3",
+            "lightning_bolt_cover",
+            "lightning_bolt_shield",
+            "quantum_computer",
+            "whitescreen"
+        ),
+        parallel(
+            smooth(1,"globe","x",129.768),
+            smooth(1,"globe","y",641.3125),
+            smooth(1,"globe","scale",0.5814549116065738)
+        ),
+        "",
+        //@+node:gcross.20110702233701.1179: *3* Classical error correction
+        rotateTitle(4),
         "",
         //@-others
         //@-<< Script >>

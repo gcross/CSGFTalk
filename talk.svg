@@ -356,6 +356,77 @@
       </g>
     </svg>
 </g>
+<!--@+node:gcross.20110702233701.1177: *3* lightning_bolt-->
+  <defs
+     id="defs26765">
+    <filter
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       color-interpolation-filters="sRGB"
+       id="filter34750">
+      <feFlood
+         result="result1"
+         flood-opacity="0"
+         flood-color="rgb(255,0,0)"
+         id="feFlood34754" />
+      <feBlend
+         in2="SourceGraphic"
+         mode="multiply"
+         in="result1"
+         result="result3"
+         id="feBlend34756" />
+      <feComposite
+         in2="SourceGraphic"
+         operator="in"
+         result="result4"
+         id="feComposite34758" />
+    </filter>
+    <filter
+       color-interpolation-filters="sRGB"
+       id="filter13021-1">
+      <feGaussianBlur
+         stdDeviation="2.5107142"
+         id="feGaussianBlur13023-6" />
+    </filter>
+    <radialGradient
+       cx="392.49249"
+       cy="322.3822"
+       r="49.17857"
+       fx="392.49249"
+       fy="322.3822"
+       id="radialGradient94681-1"
+       xlink:href="#linearGradient3195-1"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,4.1154685,0,-1004.3716)" />
+    <linearGradient
+       id="linearGradient3195-1">
+      <stop
+         id="stop3197-8"
+         style="stop-color:#ffffe4;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3199-0"
+         style="stop-color:#ffff00;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+  </defs>
+  <g
+     transform="matrix(-0.05398363,-0.56896064,0.54760501,-0.089667,75.383828,671.51693)"
+     id="lightning_bolt">
+    <g
+       id="g94675">
+      <path
+         d="m 435.42107,124.23934 -73.57142,223.57143 25,0 -49.28572,180.71428 85,-199.28571 -28.57143,0 41.42857,-205 z"
+         id="path94677"
+         style="fill:#000000;fill-opacity:0.39215686;fill-rule:evenodd;stroke:none;filter:url(#filter13021-1)" />
+      <path
+         d="m 441.42107,120.23934 -73.57142,223.57143 25,0 -49.28572,180.71428 85,-199.28571 -28.57143,0 41.42857,-205 z"
+         id="path94679"
+         style="fill:url(#radialGradient94681-1);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.62068936;stroke-dasharray:none" />
+    </g>
+  </g>
 <!--@+node:gcross.20110702233701.1161: *3* Numbers-->
 <!--@+node:gcross.20110702233701.1162: *4* huge-->
   <text
@@ -2052,6 +2123,34 @@
         y1="328.625"
         x2="901"
         y2="328.625"
+    />
+</g>
+<!--@+node:gcross.20110702233701.1178: *3* shield-->
+<rect
+    width="40"
+    height="540"
+    ry="20"
+    x="480"
+    y="168"
+    id="lightning_bolt_shield"
+    style="fill:#000000;fill-opacity:1;stroke:none"
+/>
+<g id="lightning_bolt_cover">
+    <rect
+        width="90"
+        height="440"
+        ry="0"
+        x="520"
+        y="208"
+        style="fill:#ffffff;fill-opacity:1;stroke:none"
+    />
+    <rect
+        width="20"
+        height="440"
+        ry="0"
+        x="500"
+        y="208"
+        style="fill:#000000;fill-opacity:1;stroke:none"
     />
 </g>
 <!--@+node:gcross.20110702233701.1172: *3* Speech bubbles-->
