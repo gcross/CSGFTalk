@@ -67,6 +67,19 @@ function makeFaaaaaceActor() {
     return actor
 }
 //@+node:gcross.20110702233701.1176: *3* QuantumComputerActor
+function makeQuantumComputerActor() {
+    var actor = new UseActor("quantum_computer")
+    actor.damage = 0
+    actor.open = 0
+    actor.blood = document.getElementById("quantum_computer_blood")
+    actor.top = document.getElementById("quantum_computer_top")
+    appendToMethod(actor,"update",function() {
+        this.blood.setAttribute("flood-opacity",this.damage*0.75)
+        this.top.setAttribute("x1",902.625-281.25*Math.cos(Math.PI/4*this.open))
+        this.top.setAttribute("y1",328.625-281.25*Math.sin(Math.PI/4*this.open))
+    })
+    return actor
+}
 //@+node:gcross.20110702143210.1162: ** Functions
 //@+node:gcross.20110702143210.1163: *3* rotateTitle
 function rotateTitle(index) {
@@ -394,10 +407,13 @@ window.addEventListener("load",function() {
             smooth(1,"globe","y",438.0),
             smooth(1,"globe","scale",0.79760745)
         ),
-        hireAndFadeInUseActor(0.5,"quantum_computer"),
+        hireAndFadeIn(0.5,"quantum_computer",makeQuantumComputerActor()),
         "",
         //@+node:gcross.20110702233701.1174: *3* How quantum computers die
         rotateTitle(3),
+        "",
+        linear(0.1,"quantum_computer","damage",1),
+        linear(0.5,"quantum_computer","damage",0),
         "",
         //@-others
         //@-<< Script >>
