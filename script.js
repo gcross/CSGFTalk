@@ -312,7 +312,7 @@ window.addEventListener("load",function() {
             "four_digits_post_measurement"
         ),
         "",
-        ]).concat((function(){
+        (function(){
             var lines = []
             var entrances = []
             for(var i = 1; i <= 9; ++i) {
@@ -327,9 +327,10 @@ window.addEventListener("load",function() {
                 )
             }
             lines.push(parallel.apply(null,entrances))
-            lines.push("")
-            return lines
-        })()).concat((function(){
+            return sequence.apply(null,lines)
+        })(),
+        "",
+        (function(){
             var fades = []
             for(var i = 2; i <= 9; ++i) {
                 (function(){
@@ -348,8 +349,10 @@ window.addEventListener("load",function() {
                     }
                 }
             )
-            return [parallel.apply(null,fades),""]
-        })()).concat((function(){
+            return parallel.apply(null,fades)
+        })(),
+        "",
+        (function(){
             var unfades = []
             for(var i = 2; i <= 9; ++i) {
                 (function(){
@@ -368,8 +371,9 @@ window.addEventListener("load",function() {
                     }
                 }
             )
-            return [parallel.apply(null,unfades),""]
-        })()).concat([
+            return parallel.apply(null,unfades)
+        })(),
+        "",
         hireUseActor("globe"),
         hireUseActor("i_hate_quantum_computers"),
         set("globe","x",514.9845),
