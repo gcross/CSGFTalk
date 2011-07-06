@@ -2343,6 +2343,23 @@
        y="729.20483"
        id="tspan66114">I HATE QUANTUM COMPUTERS!!!</tspan></text>
 </g>
+<!--@+node:gcross.20110705142905.1188: *4* i_hate_democracy-->
+  <g
+     id="i_hate_democracy">
+    <path
+       d="m 924.0938,454.1875 c 24.3227,0 43.9062,19.58352 43.9062,43.90625 L 968,502 c 0,24.32274 -19.5835,43.90625 -43.9062,43.90625 l -623.0313,0 L 160,688 l 74.125,-142.09375 -48.1875,0 c -24.3227,0 -43.9063,-19.58352 -43.9063,-43.90625 l 0,-3.90625 c 0,-24.32274 19.5835,-43.90625 43.9063,-43.90625 z"
+       id="path3429-6"
+       style="fill:#eeeeec;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
+    <text
+       x="170.15596"
+       y="522.46692"
+       id="text125655"
+       xml:space="preserve"
+       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Comic Sans MS;-inkscape-font-specification:Comic Sans MS"><tspan
+         x="170.15596"
+         y="522.46692"
+         id="tspan125657">I HATE DEMOCRACY!!!!!!!!</tspan></text>
+  </g>
 <!--@+node:gcross.20110629122941.1130: *3* standard_backdrop-->
 <g id="standard_backdrop">
     <linearGradient
@@ -2622,6 +2639,122 @@
     height="768"
     style="fill:grey"
 />
+<!--@+node:gcross.20110705142905.1185: *3* Voting box-->
+<!--@+node:gcross.20110705142905.1184: *4* voting_box-->
+  <g
+     id="voting_box">
+    <g
+       transform="matrix(0.729,0,0,0.729,448.15569,543.67732)"
+       id="g12"
+       style="display:inline">
+      <path
+         d="M 152.769,272.137 242.745,177.11 58.4004,159.44 152.769,272.137 z"
+         id="path14-6"
+         style="fill:#cccccc;stroke:#e5e5e5;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" />
+      <g
+         id="g16">
+        <path
+           d="m 209.383,67.2154 -52.308,54.3206 -4.306,150.601 49.118,-79.634 7.496,-125.2876 z"
+           id="path18-4"
+           style="fill:#a5a5a5;stroke:#bbbbbb;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" />
+        <path
+           d="M 157.075,121.536 2.5,92.9703 11.9404,230.668 152.769,272.137 157.075,121.536 z"
+           id="path20"
+           style="fill:#bfbfbf;stroke:#bfbfbf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" />
+      </g>
+      <path
+         d="M 157.075,121.536 2.5,92.9703 l 0,0 77.4512,-43.9112 0,0 129.4318,18.1563 0,0 -52.308,54.3206 z"
+         id="path22"
+         style="fill:#d8d8d8;stroke:#bfbfbf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" />
+      <path
+         d="m 94.251,100.357 -17.2446,-3.0625 0,0 50.1016,-35.5508 0,0 15.128,2.1899 0,0 -47.985,36.4234 z"
+         id="path24"
+         style="fill:#000000;stroke:#bfbfbf;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" />
+      <path
+         d="m 94.728,71.107 23.993,-15.3765 0,-53.2305 -23.993,12.5425 0,56.0645 z"
+         id="path26"
+         style="fill:#ff0000;stroke:#bf0000;stroke-width:5;stroke-linecap:round;stroke-linejoin:round" />
+    </g>
+    <text
+       x="458"
+       y="582.99512"
+       transform="matrix(1,0.20743442,0,1,0,0)"
+       id="text124534"
+       xml:space="preserve"
+       style="font-size:36px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+         x="458"
+         y="582.99512"
+         id="tspan124536">VOTE</tspan></text>
+  </g>
+<!--@+node:gcross.20110705142905.1186: *4* input-->
+  <defs>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow2Mend"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)"
+         id="path123720"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+  </defs>
+  <g
+     id="voting_box_input">
+    <path
+       d="m 258,418 0,40 530,0 0,-40"
+       id="path123686"
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       d="m 525.25,418 0,110"
+       id="path123688"
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend)" />
+  </g>
+  <path
+     d="M 250,554 250.16031,413.94275 520,193 530,193 799.83969,413.42366 800,554"
+     id="voting_box_input_cover"
+     style="fill:#ffffff;fill-opacity:1;stroke:none;display:inline" />
+<!--@+node:gcross.20110705142905.1187: *4* output-->
+  <defs>
+    <marker
+       refX="0"
+       refY="0"
+       orient="auto"
+       id="Arrow2Mend"
+       style="overflow:visible">
+      <path
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         transform="scale(-0.6,-0.6)"
+         id="path123720"
+         style="font-size:12px;fill-rule:evenodd;stroke-width:0.625;stroke-linejoin:round" />
+    </marker>
+  </defs>
+  <g
+     id="voting_box_output">
+    <path
+       d="m 627.02937,656.37436 110,0"
+       id="path124578"
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow2Mend);display:inline" />
+    <text
+       x="772.84546"
+       y="678.90686"
+       id="text124580"
+       xml:space="preserve"
+       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+         x="772.84546"
+         y="678.90686"
+         id="tspan124582">0 wins!</tspan></text>
+  </g>
+  <rect
+     width="397.19073"
+     height="148.03056"
+     ry="0"
+     x="619.96948"
+     y="583.32819"
+     id="voting_box_output_cover"
+     style="fill:#ffffff;fill-opacity:1;stroke:none" />
 <!--@+node:gcross.20110702143210.1159: *3* whitescreen-->
 <rect
     id="whitescreen"

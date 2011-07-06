@@ -90,6 +90,29 @@ function hideQuantumComputer() {
     return set(function(stage) { return stage.quantum_computer.style; },"opacity",0)
 }
 //@+node:gcross.20110702143210.1162: ** Functions
+//@+node:gcross.20110705142905.1183: *3* fireLightningBoltAtMiddleZero
+function fireLightningBoltAtMiddleZero() {
+    return parallel(
+        sequence(
+            hireUseActor("middle_bit_lightning_bolt","globe"),
+            parallel(
+                accelerate(0.75,"middle_bit_lightning_bolt","x",382.232),
+                accelerate(0.75,"middle_bit_lightning_bolt","y",-333.75)
+            ),
+            fire("middle_bit_lightning_bolt")
+        ),
+        sequence(
+            wait(0.5),
+            hireAndFadeInUseActor(0.1,"middle_bit_explosion"),
+            hireUseActor("middle_bit_one","middle_bit_explosion"),
+            fire("middle_bit_zero"),
+            parallel(
+                fadeIn(1,"middle_bit_one"),
+                fadeOutAndFire(1,"middle_bit_explosion")
+            )
+        )
+    )
+}
 //@+node:gcross.20110702143210.1163: *3* rotateTitle
 function rotateTitle(index) {
     return sequence(
@@ -514,25 +537,50 @@ window.addEventListener("load",function() {
         "",
         hireAndFadeInUseActor(1,"middle_bit_zero"),
         "",
+        fireLightningBoltAtMiddleZero(),
+        "",
         parallel(
-            sequence(
-                hireUseActor("middle_bit_lightning_bolt","globe"),
-                parallel(
-                    accelerate(0.75,"middle_bit_lightning_bolt","x",382.232),
-                    accelerate(0.75,"middle_bit_lightning_bolt","y",-333.75)
-                ),
-                fire("middle_bit_lightning_bolt")
-            ),
-            sequence(
-                wait(0.5),
-                hireAndFadeInUseActor(0.1,"middle_bit_explosion"),
-                hireUseActor("middle_bit_one","middle_bit_explosion"),
-                fire("middle_bit_zero"),
-                parallel(
-                    fadeIn(1,"middle_bit_one"),
-                    fadeOut(1,"middle_bit_explosion")
-                )
+            fadeOutAndFire(1,"middle_bit_one"),
+            hireAndFadeInUseActor(1,"middle_bit_zero")
+        ),
+        "",
+        hire("left_bit_zero",new UseActor("middle_bit_zero")),
+        hire("right_bit_zero",new UseActor("middle_bit_zero")),
+        parallel(
+            smooth(1,"left_bit_zero","x",-255),
+            smooth(1,"right_bit_zero","x",+255)
+        ),
+        "",
+        fireLightningBoltAtMiddleZero(),
+        "",
+        hireAndFadeInUseActor(0.5,"voting_box"),
+        "",
+        wait(0.1),
+        hireUseActor("voting_box_input","left_bit_zero"),
+        hireUseActor("voting_box_input_cover","left_bit_zero"),
+        linear(1,"voting_box_input_cover","y",360),
+        fire("voting_box_input_cover"),
+        hireUseActor("voting_box_output","voting_box"),
+        hireUseActor("voting_box_output_cover","voting_box"),
+        linear(0.5,"voting_box_output_cover","x",380),
+        fire("voting_box_output_cover"),
+        "",
+        parallel(
+            hireAndFadeInUseActor(1,"middle_bit_zero"),
+            fadeOutAndFire(1,
+                "middle_bit_one",
+                "voting_box",
+                "voting_box_input",
+                "voting_box_output"
             )
+        ),
+        hireAndFadeInUseActor(1,"i_hate_democracy"),
+        "",
+        fadeOutAndFire(1,
+            "i_hate_democracy",
+            "left_bit_zero",
+            "middle_bit_zero",
+            "right_bit_zero"
         ),
         "",
         //@-others
