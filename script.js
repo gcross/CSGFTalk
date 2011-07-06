@@ -139,6 +139,7 @@ var titles = [
     "Quantum computing: embrace the fuzz!",
     "How quantum computers die",
     "Classical error correction",
+    "Quantum error correction",
     //@-<< Titles >>
 ]
 
@@ -576,11 +577,55 @@ window.addEventListener("load",function() {
         ),
         hireAndFadeInUseActor(1,"i_hate_democracy"),
         "",
+        parallel(
+            fadeOut(1,"i_hate_democracy"),
+            fadeOut(1,"left_bit_zero"),
+            fadeOut(1,"middle_bit_zero"),
+            fadeOut(1,"right_bit_zero")
+        ),
+        fire("i_hate_democracy","middle_bit_zero"),
+        "",
+        //@+node:gcross.20110705142905.1189: *3* Quantum error correction
+        rotateTitle(5),
+        "",
+        hireAndFadeInUseActor(1,"qubits_1_through_3"),
+        "",
+        parallel(
+            sequence(
+                hireUseActor("middle_bit_lightning_bolt","globe"),
+                parallel(
+                    accelerate(0.75,"middle_bit_lightning_bolt","x",382.232),
+                    accelerate(0.75,"middle_bit_lightning_bolt","y",-333.75)
+                ),
+                fire("middle_bit_lightning_bolt")
+            ),
+            sequence(
+                wait(0.5),
+                hireAndFadeInUseActor(0.1,"middle_bit_explosion"),
+                fadeOutAndFire(1,"middle_bit_explosion")
+            )
+        ),
+        "",
+        hireAndFadeInUseActor(0.5,"voting_box"),
+        "",
+        hireAndFadeInUseActor(1,"eye","left_bit_zero"),
+        "",
+        parallel(
+            fadeIn(1,"left_bit_zero"),
+            hireAndFadeInUseActor(1,"middle_bit_one"),
+            fadeIn(1,"right_bit_zero"),
+            fadeOutAndFire(1,"qubits_1_through_3")
+        ),
+        "",
+        hireAndFadeInUseActor(1,"maniacal_laughter"),
+        "",
         fadeOutAndFire(1,
-            "i_hate_democracy",
+            "eye",
+            "maniacal_laughter",
+            "middle_bit_one",
             "left_bit_zero",
-            "middle_bit_zero",
-            "right_bit_zero"
+            "right_bit_zero",
+            "voting_box"
         ),
         "",
         //@-others

@@ -611,6 +611,64 @@
     x="512.875"
     y="398"
 >1</text>
+<!--@+node:gcross.20110705142905.1190: *3* qubits_1_through_3-->
+  <g
+     id="qubits_1_through_3">
+    <text
+       x="258.11209"
+       y="368.66013"
+       id="text124692"
+       xml:space="preserve"
+       style="font-size:192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Condensed"><tspan
+         x="258.11209"
+         y="368.66013"
+         id="tspan124694">Q</tspan></text>
+    <text
+       x="513.11212"
+       y="368.66013"
+       id="text124696"
+       xml:space="preserve"
+       style="font-size:192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Condensed"><tspan
+         x="513.11212"
+         y="368.66013"
+         id="tspan124698">Q</tspan></text>
+    <text
+       x="768.11206"
+       y="368.66013"
+       id="text124700"
+       xml:space="preserve"
+       style="font-size:192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Condensed"><tspan
+         x="768.11206"
+         y="368.66013"
+         id="tspan124702">Q</tspan></text>
+    <text
+       x="313.3754"
+       y="391.89273"
+       id="text124744"
+       xml:space="preserve"
+       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+         x="313.3754"
+         y="391.89273"
+         id="tspan124746">1</tspan></text>
+    <text
+       x="569.37537"
+       y="391.89273"
+       id="text124748"
+       xml:space="preserve"
+       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+         x="569.37537"
+         y="391.89273"
+         id="tspan124750">2</tspan></text>
+    <text
+       x="825.37537"
+       y="391.08023"
+       id="text124752"
+       xml:space="preserve"
+       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+         x="825.37537"
+         y="391.08023"
+         id="tspan124754">3</tspan></text>
+  </g>
 <!--@+node:gcross.20110702233701.1161: *3* Numbers-->
 <!--@+node:gcross.20110702233701.1162: *4* huge-->
   <text
@@ -2359,6 +2417,24 @@
          x="170.15596"
          y="522.46692"
          id="tspan125657">I HATE DEMOCRACY!!!!!!!!</tspan></text>
+  </g>
+<!--@+node:gcross.20110705142905.1191: *4* maniacal_laughter-->
+  <g
+     id="maniacal_laughter"
+     style="display:inline">
+    <path
+       d="m 924.0938,454.1875 c 24.3227,0 43.9062,19.58352 43.9062,43.90625 L 968,502 c 0,24.32274 -19.5835,43.90625 -43.9062,43.90625 l -623.0313,0 L 160,688 l 74.125,-142.09375 -48.1875,0 c -24.3227,0 -43.9063,-19.58352 -43.9063,-43.90625 l 0,-3.90625 c 0,-24.32274 19.5835,-43.90625 43.9063,-43.90625 z"
+       id="path3429-6"
+       style="fill:#eeeeec;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:2;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline" />
+    <text
+       x="160.15596"
+       y="522.46692"
+       id="text125655"
+       xml:space="preserve"
+       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Comic Sans MS;-inkscape-font-specification:Comic Sans MS"><tspan
+         x="160.15596"
+         y="522.46692"
+         id="tspan125657">BWAHAHAHAHAHA!!!!!!!!!!</tspan></text>
   </g>
 <!--@+node:gcross.20110629122941.1130: *3* standard_backdrop-->
 <g id="standard_backdrop">
