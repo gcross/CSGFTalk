@@ -102,6 +102,236 @@
     y="289"
     x="532.6666"
 />
+<!--@+node:gcross.20110705142905.1192: *3* Classical Bits-->
+<g id="classical_bits">
+    <text
+       x="258.11209"
+       y="368.66013"
+       id="text125992"
+       xml:space="preserve"
+       style="font-size:192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Condensed"><tspan
+         x="258.11209"
+         y="368.66013"
+         id="tspan125994">B</tspan></text>
+    <text
+       x="513.11212"
+       y="368.66013"
+       id="text125996"
+       xml:space="preserve"
+       style="font-size:192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Condensed"><tspan
+         x="513.11212"
+         y="368.66013"
+         id="tspan125998">B</tspan></text>
+    <text
+       x="768.11206"
+       y="368.66013"
+       id="text126000"
+       xml:space="preserve"
+       style="font-size:192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Condensed"><tspan
+         x="768.11206"
+         y="368.66013"
+         id="tspan126002">B</tspan></text>
+    <text
+       x="313.3754"
+       y="391.89273"
+       id="text126006"
+       xml:space="preserve"
+       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+         x="313.3754"
+         y="391.89273"
+         id="tspan126008">1</tspan></text>
+    <text
+       x="569.37537"
+       y="391.89273"
+       id="text126010"
+       xml:space="preserve"
+       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+         x="569.37537"
+         y="391.89273"
+         id="tspan126012">2</tspan></text>
+    <text
+       x="825.37537"
+       y="391.08023"
+       id="text126014"
+       xml:space="preserve"
+       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+         x="825.37537"
+         y="391.08023"
+         id="tspan126016">3</tspan></text>
+</g>
+
+  <g
+     id="classical_bit_3_error">
+    <text
+       x="768.11206"
+       y="368.66013"
+       id="text126000"
+       xml:space="preserve"
+       style="font-size:192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:#800000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Condensed"><tspan
+         x="768.11206"
+         y="368.66013"
+         id="tspan126002">B</tspan></text>
+    <text
+       x="825.37537"
+       y="391.08023"
+       id="text126014"
+       xml:space="preserve"
+       style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:#800000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+         x="825.37537"
+         y="391.08023"
+         id="tspan126016">3</tspan></text>
+  </g>
+  <g
+     id="classical_bit_1_error">
+    <path
+       d="m 340,298 a 80,100 0 1 1 -160,0 80,100 0 1 1 160,0 z"
+       transform="translate(-6,4)"
+       id="path9475"
+       style="fill:none;stroke:#ff0101;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+    <g>
+      <text
+         x="258.11209"
+         y="368.66013"
+         id="text127349"
+         xml:space="preserve"
+         style="font-size:192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:#800000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Condensed"><tspan
+           x="258.11209"
+           y="368.66013"
+           id="tspan127351">B</tspan></text>
+      <text
+         x="313.3754"
+         y="391.89273"
+         id="text127363"
+         xml:space="preserve"
+         style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:#800000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+           x="313.3754"
+           y="391.89273"
+           id="tspan127365">1</tspan></text>
+    </g>
+  </g>
+  <g
+     id="classical_bit_2_error">
+    <path
+       d="m 340,298 a 80,100 0 1 1 -160,0 80,100 0 1 1 160,0 z"
+       transform="translate(250,4)"
+       id="path9475-0"
+       style="fill:none;stroke:#ff0101;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+    <g>
+      <text
+         x="513.11212"
+         y="368.66013"
+         id="text127353"
+         xml:space="preserve"
+         style="font-size:192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:#800000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Condensed"><tspan
+           x="513.11212"
+           y="368.66013"
+           id="tspan127355">B</tspan></text>
+      <text
+         x="569.37537"
+         y="391.89273"
+         id="text127367"
+         xml:space="preserve"
+         style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:#800000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+           x="569.37537"
+           y="391.89273"
+           id="tspan127369">2</tspan></text>
+    </g>
+  </g>
+  <g
+     id="classical_bit_3_error">
+    <path
+       d="m 340,298 a 80,100 0 1 1 -160,0 80,100 0 1 1 160,0 z"
+       transform="translate(504,4)"
+       id="path9475-2"
+       style="fill:none;stroke:#ff0101;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+    <g>
+      <text
+         x="768.11206"
+         y="368.66013"
+         id="text126000"
+         xml:space="preserve"
+         style="font-size:192px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:condensed;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#ff0000;fill-opacity:1;stroke:#800000;stroke-width:5;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Arial Narrow;-inkscape-font-specification:Arial Narrow Condensed"><tspan
+           x="768.11206"
+           y="368.66013"
+           id="tspan126002">B</tspan></text>
+      <text
+         x="825.37537"
+         y="391.08023"
+         id="text126014"
+         xml:space="preserve"
+         style="font-size:64px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ff0000;fill-opacity:1;stroke:#800000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+           x="825.37537"
+           y="391.08023"
+           id="tspan126016">3</tspan></text>
+    </g>
+  </g>
+  <path
+     d="m 571.95312,541.82813 -16.03125,18.91405 c 26.23753,21.92691 51.68228,45.15628 75.86718,68.97657 -28.01316,28.67683 -53.83708,58.09919 -75.86718,86.48438 l 18.5625,15.75 C 597.44612,704.18072 622.82323,675.80304 650,648 c 27.17678,27.80304 52.55389,56.18072 75.51562,83.95313 l 18.5625,-15.75 c -22.03008,-28.38519 -47.85402,-57.80757 -75.86719,-86.48438 24.18492,-23.82029 49.62968,-47.04966 75.86719,-68.97657 L 728.04687,541.82813 C 701.25293,563.48735 674.93191,587.03035 650,611.4375 625.06808,587.03035 598.74707,563.48735 571.95312,541.82813 z"
+     id="do_we_agree_right_X"
+     style="fill:#ff0015;fill-opacity:1;stroke:#981100;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline" />
+  <path
+     d="m 311.95312,541.82813 -16.03125,18.91405 c 26.23753,21.92691 51.68228,45.15628 75.86718,68.97657 -28.01316,28.67683 -53.83708,58.09919 -75.86718,86.48438 l 18.5625,15.75 C 337.44612,704.18072 362.82323,675.80304 390,648 c 27.17678,27.80304 52.55389,56.18072 75.51562,83.95313 l 18.5625,-15.75 c -22.03008,-28.38519 -47.85402,-57.80757 -75.86719,-86.48438 24.18492,-23.82029 49.62968,-47.04966 75.86719,-68.97657 L 468.04687,541.82813 C 441.25293,563.48735 414.93191,587.03035 390,611.4375 365.06808,587.03035 338.74707,563.48735 311.95312,541.82813 z"
+     id="do_we_agree_left_X"
+     style="fill:#ff0015;fill-opacity:1;stroke:#981100;stroke-width:4.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline" />
+  <path
+     d="m 553.25,664.86121 13.5,-18 L 629.11121,688 C 652.55522,613.11121 694.3754,563.30599 731,532.11121 l 15.75,18 c -39.97813,31.17996 -94.87717,106.75404 -101.25,175.5 z"
+     id="do_we_agree_right_check"
+     style="fill:#54ff00;fill-opacity:1;stroke:#009800;stroke-width:4.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+  <path
+     d="m 293.25,664.86121 13.5,-18 L 369.11121,688 C 392.55522,613.11121 434.3754,563.30599 471,532.11121 l 15.75,18 c -39.97813,31.17996 -94.87717,106.75404 -101.25,175.5 z"
+     id="do_we_agree_left_check"
+     style="fill:#54ff00;fill-opacity:1;stroke:#009800;stroke-width:4.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+<!--@+node:gcross.20110705142905.1194: *3* do_we_agree-->
+<g id="do_we_agree">
+    <rect
+       width="210"
+       height="35"
+       x="285"
+       y="419"
+       id="rect125990"
+       style="fill:#e5e5e5;fill-opacity:1;stroke:#cccccc;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+    <path
+       d="m 260,398 0,30 c 0,40 16.61391,49.15348 60,60 38.8057,9.70143 60,0 70,32 10,-32 31.1943,-22.29857 70,-32 43.38609,-10.84652 60,-20 60,-60 l 0,-30"
+       id="path126018"
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+    <text
+       x="389.52539"
+       y="446.19641"
+       id="text126024"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+         x="389.52539"
+         y="446.19641"
+         id="tspan126026">Do we agree?</tspan></text>
+    <rect
+       width="210"
+       height="35"
+       x="545"
+       y="419"
+       id="rect126028"
+       style="fill:#e5e5e5;fill-opacity:1;stroke:#cccccc;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+    <path
+       d="m 520,398 0,30 c 0,40 16.61391,49.15348 60,60 38.8057,9.70143 60,0 70,32 10,-32 31.1943,-22.29857 70,-32 43.38609,-10.84652 60,-20 60,-60 l 0,-30"
+       id="path126030"
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+    <text
+       x="649.52539"
+       y="446.19641"
+       id="text126032"
+       xml:space="preserve"
+       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Arial;-inkscape-font-specification:Arial"><tspan
+         x="649.52539"
+         y="446.19641"
+         id="tspan126034">Do we agree?</tspan></text>
+</g>
+
+  <rect
+     width="554.01526"
+     height="150.96184"
+     x="243.2977"
+     y="384"
+     id="do_we_agree_cover"
+     style="fill:#ffffff;fill-opacity:1;stroke:none" />
 <!--@+node:gcross.20110702233701.1167: *3* eye-->
 <image
     id="eye"

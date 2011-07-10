@@ -140,6 +140,7 @@ var titles = [
     "How quantum computers die",
     "Classical error correction",
     "Quantum error correction",
+    "Classical error correction: an alternative",
     //@-<< Titles >>
 ]
 
@@ -626,6 +627,39 @@ window.addEventListener("load",function() {
             "left_bit_zero",
             "right_bit_zero",
             "voting_box"
+        ),
+        "",
+        //@+node:gcross.20110705142905.1193: *3* Classical error correction: an alternative
+        rotateTitle(6),
+        "",
+        hireAndFadeInUseActor(1,"classical_bits"),
+        "",
+        hireUseActor("do_we_agree_cover","classical_bits"),
+        hireUseActor("do_we_agree","do_we_agree_cover"),
+        linear(0.5,"do_we_agree_cover","y",151),
+        fire("do_we_agree_cover"),
+        "",
+        hireAndFadeInUseActors(0.5,"do_we_agree_left_check","do_we_agree_right_check"),
+        "",
+        parallel(
+            fadeOut(0.5,"do_we_agree_left_check"),
+            hireAndFadeInUseActors(0.5,"do_we_agree_left_X","classical_bit_1_error")
+        ),
+        "",
+        parallel(
+            fadeOut(0.5,"do_we_agree_left_X"),
+            fadeOut(0.5,"do_we_agree_right_check"),
+            fadeIn(0.5,"do_we_agree_left_check"),
+            fadeOutAndFire(0.5,"classical_bit_1_error"),
+            hireAndFadeInUseActors(0.5,"do_we_agree_right_X","classical_bit_3_error")
+        ),
+        "",
+        parallel(
+            fadeOut(0.5,"do_we_agree_right_check"),
+            fadeIn(0.5,"do_we_agree_left_X"),
+            fadeOut(0.5,"do_we_agree_left_check"),
+            fadeOutAndFire(0.5,"classical_bit_3_error"),
+            hireAndFadeInUseActor(0.5,"classical_bit_2_error")
         ),
         "",
         //@-others
