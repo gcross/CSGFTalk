@@ -11,7 +11,7 @@ function MagnifiedBoxActor(particle_box_id) {
     this.style = {}
 }
 MagnifiedBoxActor.prototype = Object.create(ActorPrototype)
-augment(MagnifiedBoxActor,{
+augment(MagnifiedBoxActor.prototype,{
     magnification: 1
 ,   particle_y: 0
 ,   createNode: function() {
