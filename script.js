@@ -140,6 +140,7 @@ var titles = [
     "Classical error correction",
     "Quantum error correction",
     "Classical error correction: an alternative",
+    "Quantum measurement",
     //@-<< Titles >>
 ]
 
@@ -660,6 +661,19 @@ window.addEventListener("load",function() {
             fadeOutAndFire(0.5,"classical_bit_3_error"),
             hireAndFadeInUseActor(0.5,"classical_bit_2_error")
         ),
+        fire("do_we_agree_left_check","do_we_agree_right_check"),
+        "",
+        fadeOutAndFire(1,
+            "classical_bits",
+            "classical_bit_2_error",
+            "do_we_agree",
+            "do_we_agree_left_X",
+            "do_we_agree_right_X",
+            "globe"
+        ),
+        "",
+        //@+node:gcross.20110709173714.1269: *3* Quantum measurement
+        rotateTitle(7),
         "",
         //@-others
         //@-<< Script >>
