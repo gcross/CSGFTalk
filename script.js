@@ -4,6 +4,53 @@
 
 //@+others
 //@+node:gcross.20110629122941.1147: ** Actors
+//@+node:gcross.20110711144232.1350: *3* BlochSphereActor
+function makeBlochSphereActor() {
+    var actor = new UseActor("bloch_sphere")
+    augment(actor,{
+        bloch_sphere_labels:
+            ["bloch",
+             "bloch_globe",
+             "bloch_axis",
+             "bloch_X_axis",
+             "bloch_Y_axis",
+             "bloch_Z_axis",
+             "bloch_classical_Z_intersections",
+             "bloch_classical_bit_values",
+             "bloch_Z_axis_label",
+             "bloch_probabilistic_bit_axis"
+            ]
+    ,   styles: {}
+    ,   lookupStyleFor: function(selector) {
+            var style = this.styles[selector]
+            if(style == undefined) {
+                style = this.stylesheet.cssRules[this.stylesheet.insertRule(selector + " {}")].style
+                this.styles[selector] = style
+            }
+            return style
+        }
+    ,   removeStyleFor: function(selector) {
+            for(var index = 0;
+                index < this.stylesheet.cssRules.length
+                    && !(this.stylesheet.cssRules[index].selectorText == selector);
+                ++index
+            ) ;
+            if(index < this.stylesheet.cssRules.length)
+                this.stylesheet.deleteRule(index)
+            delete this.styles[selector]
+        }
+    ,   stylesheet: (function() {
+            for(var i = 0; i < document.styleSheets.length; ++i) {
+                if(document.styleSheets[i].title == "bloch_sphere") {
+                    return document.styleSheets[i]
+                }
+            }
+            throw Error('Unable to find style sheet "bloch_sphere"')
+        })()
+    })
+    return actor
+}
+
 //@+node:gcross.20110629122941.1148: *3* MagnifiedBoxActor
 function MagnifiedBoxActor(particle_box_id) {
     this.particle_box_id = particle_box_id
@@ -675,6 +722,72 @@ window.addEventListener("load",function() {
         //@+node:gcross.20110709173714.1269: *3* Quantum measurement
         rotateTitle(7),
         "",
+        hire("bloch_sphere",makeBlochSphereActor()),
+        set(function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch") },"opacity",0),
+        linear(1,function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_classical_bit_values") },"opacity",0,1),
+        "",
+        linear(1,function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_probabilistic_bit_axis") },"opacity",0,1),
+        "",
+        parallel(
+            linear(1,function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_globe") },"opacity",0,1),
+            linear(1,function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_classical_Z_intersections") },"opacity",0,1)
+        ),
+        "",
+        linear(1,function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch") },"opacity",1),
+        sequence.apply(null,
+            [".bloch"
+            ,".bloch.bloch_classical_bit_values"
+            ,".bloch.bloch_probabilistic_bit_axis"
+            ,".bloch.bloch_classical_Z_intersections"
+            ,".bloch.bloch_globe"
+            ].map(function (selector) {
+                return set(function(stage) { return stage.bloch_sphere.lookupStyleFor(selector) },"opacity","")
+            })
+        ),
+        "",
+        set(function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_axis.bloch_Z_axis") },"opacity",1),
+        set(function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_axis") },"opacity"),
+        parallel(
+            linear(1,function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_axis") },"opacity",1,0.25),
+            hireAndFadeInUseActor(1,"bloch_Z_measurement_outcomes")
+        ),
+        "",
+        set(function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_axis.bloch_X_axis") },"opacity",""),
+        parallel(
+            sequence(
+                linear(1,function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_axis.bloch_Z_axis") },"opacity",0.25),
+                set(function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_axis.bloch_Z_axis") },"opacity","")
+            ),
+            linear(1,function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_axis.bloch_X_axis") },"opacity",0.25,1),
+            hireAndFadeInUseActor(1,"bloch_X_measurement_outcomes"),
+            fadeOut(1,"bloch_Z_measurement_outcomes")
+        ),
+        "",
+        set(function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_axis.bloch_Y_axis") },"opacity",""),
+        parallel(
+            sequence(
+                linear(1,function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_axis.bloch_X_axis") },"opacity",0.25),
+                set(function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_axis.bloch_X_axis") },"opacity","")
+            ),
+            linear(1,function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_axis.bloch_Y_axis") },"opacity",0.25,1),
+            hireAndFadeInUseActor(1,"bloch_Y_measurement_outcomes"),
+            fadeOut(1,"bloch_X_measurement_outcomes")
+        ),
+        "",
+        parallel(
+            linear(1,function(stage) { return stage.bloch_sphere.lookupStyleFor(".bloch.bloch_axis") },"opacity",1),
+            fadeIn(1,"bloch_Z_measurement_outcomes"),
+            fadeIn(1,"bloch_X_measurement_outcomes")
+        ),
+        sequence.apply(null,
+            [".bloch.bloch_axis"
+            ,".bloch.bloch_X_axis"
+            ,".bloch.bloch_Y_axis"
+            ,".bloch.bloch_Z_axis"
+            ].map(function (selector) {
+                return set(function(stage) { return stage.bloch_sphere.lookupStyleFor(selector) },"opacity","")
+            })
+        ),
         //@-others
         //@-<< Script >>
     ]))
