@@ -118,9 +118,8 @@ function rotateTitle(index) {
     return sequence(
         parallel(
             accelerate(0.25,titles[index-1],"y",-50),
-            fadeOut(0.25,titles[index-1])
+            fadeOutAndFire(0.25,titles[index-1])
         ),
-        fire(titles[index-1]),
         hireUseActor(titles[index]),
         set(titles[index],"y",-50),
         parallel(
