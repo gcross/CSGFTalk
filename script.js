@@ -734,13 +734,87 @@ window.addEventListener("load",function() {
         ),
         sequence.apply(null,
             [".bloch.bloch_axis"
-            ,".bloch.bloch_X_axis"
-            ,".bloch.bloch_Y_axis"
-            ,".bloch.bloch_Z_axis"
+            ,".bloch.bloch_axis.bloch_X_axis"
+            ,".bloch.bloch_axis.bloch_Y_axis"
+            ,".bloch.bloch_axis.bloch_Z_axis"
             ].map(function (selector) {
                 return set(function(stage) { return stage.lookupStyleFor(selector) },"opacity","")
             })
         ),
+        "",
+        hireAndFadeInUseActor(0.5,"first_code_backdrop"),
+        hireUseActors("first_code_measurement_1","first_code_measurement_2","first_code_measurement_3"),
+        set("first_code_measurement_1","x",280),
+        set("first_code_measurement_2","x",280),
+        set("first_code_measurement_3","x",280),
+        parallel(
+            decelerate(0.5,"first_code_measurement_1","x",0),
+            sequence(
+                wait(0.25),
+                decelerate(0.5,"first_code_measurement_2","x",0)
+            ),
+            sequence(
+                wait(0.5),
+                decelerate(0.5,"first_code_measurement_3","x",0)
+            )
+        ),
+        "",
+        set(function(stage) { return stage.lookupStyleFor(".first_code_Z_measurements") },"opacity",""),
+        set(function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis") },"opacity"),
+        parallel(
+            linear(1,function(stage) { return stage.lookupStyleFor(".first_code_Z_measurements") },"opacity",1,0.1),
+            hireAndFadeInUseActor(1,"bloch_identity_measurement_label"),
+            linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis") },"opacity",1,0.25),
+            linear(1,function(stage) { return stage.bloch_X_measurement_outcomes.style },"opacity",1,0.25),
+            linear(1,function(stage) { return stage.bloch_Y_measurement_outcomes.style },"opacity",1,0.25),
+            linear(1,function(stage) { return stage.bloch_Z_measurement_outcomes.style },"opacity",1,0.25)
+        ),
+        "",
+        parallel(
+            linear(1,function(stage) { return stage.bloch_X_measurement_outcomes.style },"opacity",1),
+            linear(1,function(stage) { return stage.bloch_Y_measurement_outcomes.style },"opacity",1),
+            linear(1,function(stage) { return stage.bloch_Z_measurement_outcomes.style },"opacity",1),
+            fadeOutAndFire(1,"bloch_identity_measurement_label"),
+            sequence(
+                wait(0.01), // workaround for what looks like a stupid browser bug that was causing measurement outcomes to flicker
+                parallel(
+                    linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis") },"opacity",1),
+                    linear(1,function(stage) { return stage.lookupStyleFor(".first_code_Z_measurements") },"opacity",1)
+                )
+            )
+        ),
+        "",
+        hireAndFadeInUseActor(0.5,"second_code_backdrop"),
+        hireUseActors("second_code_measurement_1","second_code_measurement_2"),
+        set("second_code_measurement_1","x",280),
+        set("second_code_measurement_2","x",280),
+        parallel(
+            decelerate(0.5,"second_code_measurement_1","x",0),
+            sequence(
+                wait(0.25),
+                decelerate(0.5,"second_code_measurement_2","x",0)
+            )
+        ),
+        "",
+        parallel(
+            linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis.bloch_Z_axis") },"opacity",1,0.25),
+            linear(1,function(stage) { return stage.bloch_Z_measurement_outcomes.style },"opacity",1,0.25)
+        ),
+        "",
+        fadeOutAndFire(1,
+            "bloch_sphere",
+            "bloch_X_measurement_outcomes",
+            "bloch_Y_measurement_outcomes",
+            "bloch_Z_measurement_outcomes",
+            "first_code_backdrop",
+            "first_code_measurement_1",
+            "first_code_measurement_2",
+            "first_code_measurement_3",
+            "second_code_backdrop",
+            "second_code_measurement_1",
+            "second_code_measurement_2"
+        ),
+        "",
         //@-others
         //@-<< Script >>
     ]))

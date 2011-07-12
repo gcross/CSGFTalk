@@ -1696,6 +1696,318 @@
      d="m 293.25,664.86121 13.5,-18 L 369.11121,688 C 392.55522,613.11121 434.3754,563.30599 471,532.11121 l 15.75,18 c -39.97813,31.17996 -94.87717,106.75404 -101.25,175.5 z"
      id="do_we_agree_left_check"
      style="fill:#54ff00;fill-opacity:1;stroke:#009800;stroke-width:4.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+<!--@+node:gcross.20110711171503.1273: *3* code measurements-->
+  <g
+     id="first_code_measurement_2">
+    <text
+       class="first_code_identity_measurements"
+       sodipodi:linespacing="100%"
+       id="text27380"
+       y="353.66675"
+       x="786.73773"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#a4a4a4;fill-opacity:1;fill-rule:nonzero;stroke:#797979;stroke-width:1.77948892;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       xml:space="preserve"><tspan
+         y="353.66675"
+         x="786.73773"
+         id="tspan27382"
+         sodipodi:role="line"
+         style="stroke-width:1.77948892">I</tspan></text>
+    <path
+       style="fill:none;stroke:#bfbfbf;stroke-width:2.91599989;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline"
+       d="m 751.50952,300.68562 218.70002,0 0,68.526 -218.70002,0 z"
+       id="path27386"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <g class="first_code_Z_measurements">
+    <text
+       xml:space="preserve"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#0016ff;fill-opacity:1;fill-rule:nonzero;stroke:#000b80;stroke-width:1.77978516px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       x="860.06879"
+       y="353.66675"
+       id="text27396"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan27398"
+         x="860.06879"
+         y="353.66675"
+         style="stroke:#000b80;stroke-width:1.77978516;stroke-opacity:1">Z</tspan></text>
+    </g>
+    <text
+       class="first_code_identity_measurements"
+       sodipodi:linespacing="100%"
+       id="text27424"
+       y="353.66675"
+       x="932.53778"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#a4a4a4;fill-opacity:1;fill-rule:nonzero;stroke:#797979;stroke-width:1.77948892;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       xml:space="preserve"><tspan
+         style="stroke-width:1.77948892"
+         y="353.66675"
+         x="932.53778"
+         id="tspan27426"
+         sodipodi:role="line">I</tspan></text>
+  </g>
+  <g
+     id="first_code_measurement_3">
+    <text
+       class="first_code_identity_measurements"
+       xml:space="preserve"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#a4a4a4;fill-opacity:1;fill-rule:nonzero;stroke:#797979;stroke-width:1.77948892;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       x="786.73773"
+       y="436.26678"
+       id="text27404"
+       sodipodi:linespacing="100%"><tspan
+         style="stroke-width:1.77948892"
+         sodipodi:role="line"
+         id="tspan27406"
+         x="786.73773"
+         y="436.26678">I</tspan></text>
+    <path
+       sodipodi:nodetypes="ccccc"
+       inkscape:connector-curvature="0"
+       id="path27408"
+       d="m 751.50952,383.28562 218.70002,0 0,68.526 -218.70002,0 z"
+       style="fill:none;stroke:#bfbfbf;stroke-width:2.91599989;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline" />
+    <g class="first_code_Z_measurements">
+    <text
+       xml:space="preserve"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#0016ff;fill-opacity:1;fill-rule:nonzero;stroke:#000b80;stroke-width:1.77978516px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       x="932.96887"
+       y="436.26678"
+       id="text27414"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan27416"
+         x="932.96887"
+         y="436.26678"
+         style="stroke:#000b80;stroke-width:1.77978516;stroke-opacity:1">Z</tspan></text>
+    </g>
+    <text
+       class="first_code_identity_measurements"
+       xml:space="preserve"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#a4a4a4;fill-opacity:1;fill-rule:nonzero;stroke:#797979;stroke-width:1.77948892;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       x="859.63776"
+       y="436.26678"
+       id="text27428"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan27430"
+         x="859.63776"
+         y="436.26678"
+         style="stroke-width:1.77948892">I</tspan></text>
+  </g>
+  <g
+     id="first_code_measurement_1">
+    <text
+       class="first_code_identity_measurements"
+       xml:space="preserve"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#a4a4a4;fill-opacity:1;fill-rule:nonzero;stroke:#797979;stroke-width:1.77948892;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       x="932.53778"
+       y="271.60675"
+       id="text27376"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan27378"
+         x="932.53778"
+         y="271.60675"
+         style="stroke-width:1.77948892">I</tspan></text>
+    <path
+       sodipodi:nodetypes="ccccc"
+       inkscape:connector-curvature="0"
+       id="path27384"
+       d="m 751.50952,218.62562 218.70002,0 0,68.526 -218.70002,0 z"
+       style="fill:none;stroke:#bfbfbf;stroke-width:2.91599989;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline" />
+    <g class="first_code_Z_measurements">
+    <text
+       class="first_code_Z_measurements"
+       xml:space="preserve"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#0016ff;fill-opacity:1;fill-rule:nonzero;stroke:#000b80;stroke-width:1.77978516px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       x="787.16876"
+       y="271.60675"
+       id="text27388"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan27390"
+         x="787.16876"
+         y="271.60675"
+         style="stroke:#000b80;stroke-width:1.77978516;stroke-opacity:1">Z</tspan></text>
+    </g>
+    <text
+       class="first_code_identity_measurements"
+       sodipodi:linespacing="100%"
+       id="text27432"
+       y="271.60675"
+       x="859.63776"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#a4a4a4;fill-opacity:1;fill-rule:nonzero;stroke:#797979;stroke-width:1.77948892;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       xml:space="preserve"><tspan
+         style="stroke-width:1.77948892"
+         y="271.60675"
+         x="859.63776"
+         id="tspan27434"
+         sodipodi:role="line">I</tspan></text>
+  </g>
+  <g
+     id="second_code_measurement_1"
+     inkscape:label="#g54140">
+    <text
+       sodipodi:linespacing="100%"
+       id="text41774"
+       y="637.60675"
+       x="932.53772"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#a4a4a4;fill-opacity:1;fill-rule:nonzero;stroke:#797979;stroke-width:1.77948892;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       xml:space="preserve"><tspan
+         style="stroke-width:1.77948892"
+         y="637.60675"
+         x="932.53772"
+         id="tspan41776"
+         sodipodi:role="line">I</tspan></text>
+    <path
+       style="fill:none;stroke:#bfbfbf;stroke-width:2.91599989;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline"
+       d="m 751.50952,584.62562 218.7,0 0,68.526 -218.7,0 z"
+       id="path41782"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <text
+       sodipodi:linespacing="100%"
+       id="text41786"
+       y="637.60675"
+       x="787.16876"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#0016ff;fill-opacity:1;fill-rule:nonzero;stroke:#000b80;stroke-width:1.77978516px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       xml:space="preserve"><tspan
+         style="stroke:#000b80;stroke-width:1.77978516;stroke-opacity:1"
+         y="637.60675"
+         x="787.16876"
+         id="tspan41788"
+         sodipodi:role="line">Z</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#0016ff;fill-opacity:1;fill-rule:nonzero;stroke:#000b80;stroke-width:1.77978516px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       x="860.06873"
+       y="637.60675"
+       id="text41790"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan41792"
+         x="860.06873"
+         y="637.60675"
+         style="stroke:#000b80;stroke-width:1.77978516;stroke-opacity:1">Z</tspan></text>
+  </g>
+  <g
+     id="second_code_measurement_2"
+     inkscape:label="#g54149">
+    <text
+       xml:space="preserve"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#a4a4a4;fill-opacity:1;fill-rule:nonzero;stroke:#797979;stroke-width:1.77948892;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       x="786.73773"
+       y="719.66675"
+       id="text41778"
+       sodipodi:linespacing="100%"><tspan
+         style="stroke-width:1.77948892"
+         sodipodi:role="line"
+         id="tspan41780"
+         x="786.73773"
+         y="719.66675">I</tspan></text>
+    <path
+       sodipodi:nodetypes="ccccc"
+       inkscape:connector-curvature="0"
+       id="path41784"
+       d="m 751.50952,666.68562 218.7,0 0,68.526 -218.7,0 z"
+       style="fill:none;stroke:#bfbfbf;stroke-width:2.91599989;stroke-linecap:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;display:inline" />
+    <text
+       sodipodi:linespacing="100%"
+       id="text41794"
+       y="719.66675"
+       x="860.06873"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#0016ff;fill-opacity:1;fill-rule:nonzero;stroke:#000b80;stroke-width:1.77978516px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       xml:space="preserve"><tspan
+         style="stroke:#000b80;stroke-width:1.77978516;stroke-opacity:1"
+         y="719.66675"
+         x="860.06873"
+         id="tspan41796"
+         sodipodi:role="line">Z</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:56.953125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#0016ff;fill-opacity:1;fill-rule:nonzero;stroke:#000b80;stroke-width:1.77978516px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Times New Roman;-inkscape-font-specification:Times"
+       x="932.96875"
+       y="719.66675"
+       id="text41798"
+       sodipodi:linespacing="100%"><tspan
+         sodipodi:role="line"
+         id="tspan41800"
+         x="932.96875"
+         y="719.66675"
+         style="stroke:#000b80;stroke-width:1.77978516;stroke-opacity:1">Z</tspan></text>
+  </g>
+  <g
+     id="second_code_backdrop"
+     inkscape:label="#g54135">
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       x="860.80096"
+       y="553.59027"
+       id="text27442"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan27444"
+         x="860.80096"
+         y="553.59027">Second code</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path27448"
+       d="m 697.719,493.552 7e-5,274.448"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+  <g
+     id="first_code_backdrop"
+     inkscape:label="#g54056">
+    <text
+       sodipodi:linespacing="125%"
+       id="text27436"
+       y="187.59026"
+       x="860.05878"
+       style="font-size:40px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial"
+       xml:space="preserve"><tspan
+         y="187.59026"
+         x="860.05878"
+         id="tspan27438"
+         sodipodi:role="line">First code</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path27450"
+       d="m 697.71907,493.05243 326.28093,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 697.719,130 7e-5,363.552"
+       id="path54054"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+  </g>
+  <g
+     id="bloch_identity_measurement_label"
+     transform="translate(31.005306,0)"
+     inkscape:label="#g27284">
+    <rect
+       y="428.41196"
+       x="275.82349"
+       height="74.738831"
+       width="70.342422"
+       id="rect26510"
+       style="fill:#ffffff;fill-opacity:1;stroke:#404040;stroke-width:3.515625;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline" />
+    <text
+       sodipodi:linespacing="125%"
+       style="font-size:76.5703125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#808080;fill-opacity:1;stroke:#3f4000;stroke-width:1.953125;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline;font-family:Times New Roman;-inkscape-font-specification:'Times New Roman,'"
+       xml:space="preserve"
+       id="text26512"
+       y="490.64352"
+       x="298.22675"><tspan
+         style="font-size:76.5703125px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#808080;fill-opacity:1;stroke:#3f4000;stroke-width:1.953125;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;font-family:Times New Roman;-inkscape-font-specification:'Times New Roman,'"
+         id="tspan26514"
+         y="490.64352"
+         x="298.22675">I</tspan></text>
+  </g>
 <!--@+node:gcross.20110705142905.1194: *3* do_we_agree-->
 <g id="do_we_agree">
     <rect
