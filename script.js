@@ -846,6 +846,29 @@ window.addEventListener("load",function() {
         "",
         fadeOutAndFire(1,"grey_rectangle","title_slide"),
         "",
+        //@+node:gcross.20110712230459.1201: *3* The CodeQuest Algorithm
+        sequence.apply(null,[1,2,3].map(function(index) {
+            var actor_name = "codequest_algorithm_step_" + index
+            return sequence(
+                hireUseActor(actor_name),
+                set(actor_name,"x",1000),
+                decelerate(0.75,actor_name,"x",0)
+            );
+        })),
+        "",
+        hireAndFadeInUseActor(1,"chuck_norris"),
+        "",
+        hireUseActor("codequest_computer","chuck_norris"),
+        fadeOutAndFire(1,
+            "codequest_algorithm_step_1",
+            "codequest_algorithm_step_2",
+            "codequest_algorithm_step_3",
+            "chuck_norris"
+        ),
+        "",
+        hireUseActor("codequest_hunt_cover","codequest_computer"),
+        hireUseActor("codequest_hunt","codequest_hunt_cover"),
+        linear(2,"codequest_hunt_cover","x",975),
         //@-others
         //@-<< Script >>
     ]))
