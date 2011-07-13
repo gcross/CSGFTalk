@@ -888,6 +888,17 @@ window.addEventListener("load",function() {
             hireAndFadeIn(1,"lattice_exhibition_interactions_label")
         ),
         "",
+        parallel(
+            fadeOutAndFire(1,
+                "lattice_exhibition",
+                "lattice_exhibition_qubits_label",
+                "lattice_exhibition_interactions_label"
+            ),
+            hireAndFadeIn(1,"tilings")
+        ),
+        "",
+        hireAndFadeIn(1,"tiling_choice_counts"),
+        "",
         //@-others
         //@-<< Script >>
     ]))
