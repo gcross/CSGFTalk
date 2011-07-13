@@ -678,56 +678,54 @@ window.addEventListener("load",function() {
         rotateTitle(7),
         "",
         hireUseActor("bloch_sphere"),
-        set(function(stage) { return stage.lookupStyleFor(".bloch") },"opacity",0),
-        linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_classical_bit_values") },"opacity",0,1),
+        set(styleFor(".bloch"),"opacity",0),
+        linear(1,styleFor(".bloch.bloch_classical_bit_values"),"opacity",0,1),
         "",
-        linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_probabilistic_bit_axis") },"opacity",0,1),
+        linear(1,styleFor(".bloch.bloch_probabilistic_bit_axis"),"opacity",0,1),
         "",
         parallel(
-            linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_globe") },"opacity",0,1),
-            linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_classical_Z_intersections") },"opacity",0,1)
+            linear(1,styleFor(".bloch.bloch_globe"),"opacity",0,1),
+            linear(1,styleFor(".bloch.bloch_classical_Z_intersections"),"opacity",0,1)
         ),
         "",
-        linear(1,function(stage) { return stage.lookupStyleFor(".bloch") },"opacity",1),
+        linear(1,styleFor(".bloch"),"opacity",1),
         sequence.apply(null,
             [".bloch"
             ,".bloch.bloch_classical_bit_values"
             ,".bloch.bloch_probabilistic_bit_axis"
             ,".bloch.bloch_classical_Z_intersections"
             ,".bloch.bloch_globe"
-            ].map(function (selector) {
-                return set(function(stage) { return stage.lookupStyleFor(selector) },"opacity","")
-            })
+            ].map(function (selector) { return set(styleFor(selector),"opacity",""); })
         ),
         "",
-        set(function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis.bloch_Z_axis") },"opacity",1),
+        set(styleFor(".bloch.bloch_axis.bloch_Z_axis"),"opacity",1),
         parallel(
-            linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis") },"opacity",1,0.25),
+            linear(1,styleFor(".bloch.bloch_axis"),"opacity",1,0.25),
             hireAndFadeInUseActor(1,"bloch_Z_measurement_outcomes")
         ),
         "",
         parallel(
             sequence(
-                linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis.bloch_Z_axis") },"opacity",0.25),
-                set(function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis.bloch_Z_axis") },"opacity","")
+                linear(1,styleFor(".bloch.bloch_axis.bloch_Z_axis"),"opacity",0.25),
+                set(styleFor(".bloch.bloch_axis.bloch_Z_axis"),"opacity","")
             ),
-            linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis.bloch_X_axis") },"opacity",0.25,1),
+            linear(1,styleFor(".bloch.bloch_axis.bloch_X_axis"),"opacity",0.25,1),
             hireAndFadeInUseActor(1,"bloch_X_measurement_outcomes"),
             fadeOut(1,"bloch_Z_measurement_outcomes")
         ),
         "",
         parallel(
             sequence(
-                linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis.bloch_X_axis") },"opacity",0.25),
-                set(function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis.bloch_X_axis") },"opacity","")
+                linear(1,styleFor(".bloch.bloch_axis.bloch_X_axis"),"opacity",0.25),
+                set(styleFor(".bloch.bloch_axis.bloch_X_axis"),"opacity","")
             ),
-            linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis.bloch_Y_axis") },"opacity",0.25,1),
+            linear(1,styleFor(".bloch.bloch_axis.bloch_Y_axis"),"opacity",0.25,1),
             hireAndFadeInUseActor(1,"bloch_Y_measurement_outcomes"),
             fadeOut(1,"bloch_X_measurement_outcomes")
         ),
         "",
         parallel(
-            linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis") },"opacity",1),
+            linear(1,styleFor(".bloch.bloch_axis"),"opacity",1),
             fadeIn(1,"bloch_Z_measurement_outcomes"),
             fadeIn(1,"bloch_X_measurement_outcomes")
         ),
@@ -736,9 +734,7 @@ window.addEventListener("load",function() {
             ,".bloch.bloch_axis.bloch_X_axis"
             ,".bloch.bloch_axis.bloch_Y_axis"
             ,".bloch.bloch_axis.bloch_Z_axis"
-            ].map(function (selector) {
-                return set(function(stage) { return stage.lookupStyleFor(selector) },"opacity","")
-            })
+            ].map(function (selector) { return set(styleFor(selector),"opacity",""); })
         ),
         "",
         hireAndFadeInUseActor(0.5,"first_code_backdrop"),
@@ -759,24 +755,24 @@ window.addEventListener("load",function() {
         ),
         "",
         parallel(
-            linear(1,function(stage) { return stage.lookupStyleFor(".first_code_Z_measurements") },"opacity",1,0.1),
+            linear(1,styleFor(".first_code_Z_measurements"),"opacity",1,0.1),
             hireAndFadeInUseActor(1,"bloch_identity_measurement_label"),
-            linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis") },"opacity",1,0.25),
-            linear(1,function(stage) { return stage.bloch_X_measurement_outcomes.style },"opacity",1,0.25),
-            linear(1,function(stage) { return stage.bloch_Y_measurement_outcomes.style },"opacity",1,0.25),
-            linear(1,function(stage) { return stage.bloch_Z_measurement_outcomes.style },"opacity",1,0.25)
+            linear(1,styleFor(".bloch.bloch_axis"),"opacity",1,0.25),
+            linear(1,styleOf("bloch_X_measurement_outcomes"),"opacity",1,0.25),
+            linear(1,styleOf("bloch_Y_measurement_outcomes"),"opacity",1,0.25),
+            linear(1,styleOf("bloch_Z_measurement_outcomes"),"opacity",1,0.25)
         ),
         "",
         parallel(
-            linear(1,function(stage) { return stage.bloch_X_measurement_outcomes.style },"opacity",1),
-            linear(1,function(stage) { return stage.bloch_Y_measurement_outcomes.style },"opacity",1),
-            linear(1,function(stage) { return stage.bloch_Z_measurement_outcomes.style },"opacity",1),
+            linear(1,styleOf("bloch_X_measurement_outcomes"),"opacity",1),
+            linear(1,styleOf("bloch_Y_measurement_outcomes"),"opacity",1),
+            linear(1,styleOf("bloch_Z_measurement_outcomes"),"opacity",1),
             fadeOutAndFire(1,"bloch_identity_measurement_label"),
             sequence(
                 wait(0.01), // workaround for what looks like a stupid browser bug that was causing measurement outcomes to flicker
                 parallel(
-                    linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis") },"opacity",1),
-                    linear(1,function(stage) { return stage.lookupStyleFor(".first_code_Z_measurements") },"opacity",1)
+                    linear(1,styleFor(".bloch.bloch_axis"),"opacity",1),
+                    linear(1,styleFor(".first_code_Z_measurements"),"opacity",1)
                 )
             )
         ),
@@ -794,8 +790,8 @@ window.addEventListener("load",function() {
         ),
         "",
         parallel(
-            linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis.bloch_Z_axis") },"opacity",1,0.25),
-            linear(1,function(stage) { return stage.bloch_Z_measurement_outcomes.style },"opacity",1,0.25)
+            linear(1,styleFor(".bloch.bloch_axis.bloch_Z_axis"),"opacity",1,0.25),
+            linear(1,styleOf("bloch_Z_measurement_outcomes"),"opacity",1,0.25)
         ),
         "",
         fadeOutAndFire(1,
