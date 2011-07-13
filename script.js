@@ -143,6 +143,7 @@ var titles = [
     "Quantum measurement",
     "The Feynman Algorithm (applied to codes)",
     "The CodeQuest Algorithm",
+    "Case Study: Lattice codes",
     //@-<< Titles >>
 ]
 
@@ -867,6 +868,26 @@ window.addEventListener("load",function() {
         hire("codequest_hunt_cover",default_value,"codequest_computer"),
         hire("codequest_hunt",default_value,"codequest_hunt_cover"),
         linear(2,"codequest_hunt_cover","x",975),
+        fire("codequest_hunt_cover"),
+        "",
+        fadeOutAndFire(1,"codequest_computer","codequest_hunt"),
+        //@+node:gcross.20110712230459.1204: *3* Case Study: Lattice codes
+        rotateTitle(10),
+        "",
+        set(styleFor("#lattice_exhibition_qubits"),"opacity",0),
+        set(styleFor("#lattice_exhibition_interactions"),"opacity",0),
+        hireAndFadeIn(1,"lattice_exhibition"),
+        "",
+        parallel(
+            linear(1,styleFor("#lattice_exhibition_qubits"),"opacity",1),
+            hireAndFadeIn(1,"lattice_exhibition_qubits_label")
+        ),
+        "",
+        parallel(
+            linear(1,styleFor("#lattice_exhibition_interactions"),"opacity",1),
+            hireAndFadeIn(1,"lattice_exhibition_interactions_label")
+        ),
+        "",
         //@-others
         //@-<< Script >>
     ]))
