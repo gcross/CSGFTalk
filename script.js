@@ -164,7 +164,7 @@ window.addEventListener("load",function() {
         //@+node:gcross.20110629122941.1129: ** << Script >>
         //@+others
         //@+node:gcross.20110702143210.1151: *3* Title
-        hireUseActor("title_slide"),
+        hire("title_slide"),
 
         //@+at
         // Hack to work around Chrome filter bug.
@@ -173,11 +173,11 @@ window.addEventListener("load",function() {
         hideQuantumComputer(),
         //@+node:gcross.20110702143210.1150: *3* Quantum mechanics is fuzzy
         "",
-        hireUseActor("standard_backdrop","title_slide"),
-        hireUseActor(titles[0],"title_slide"),
-        hireUseActor("shrinking_particle_backdrop","title_slide"),
+        hire("standard_backdrop",default_value,"title_slide"),
+        hire(titles[0],default_value,"title_slide"),
+        hire("shrinking_particle_backdrop",default_value,"title_slide"),
         hire("magnified_box",new MagnifiedBoxActor("particle_box"),"title_slide"),
-        hireUseActor("grey_rectangle","title_slide"),
+        hire("grey_rectangle",default_value,"title_slide"),
         fadeOutAndFire(1,
             "grey_rectangle",
             "title_slide"
@@ -190,6 +190,7 @@ window.addEventListener("load",function() {
         smooth(0.5,"magnified_box","particle_y",+65),
         hire("magnified_box2",new MagnifiedBoxActor("particle_box2"),"magnified_box"),
         set("magnified_box2","particle_y",+65),
+        "",
         fadeOutAndFire(0.5,"magnified_box"),
         "",
         parallel(
@@ -203,7 +204,7 @@ window.addEventListener("load",function() {
         //@+node:gcross.20110702143210.1152: *3* But who actually makes things that small?
         rotateTitle(1),
         "",
-        hireUseActor("intel"),
+        hire("intel"),
         set("intel","x",512),
         set("intel","y",480),
         set("intel","scale",0),
@@ -215,23 +216,23 @@ window.addEventListener("load",function() {
             linear(2,"intel","scale",1.5)
         ),
         "",
-        hireUseActor("amd"),
+        hire("amd"),
         set("amd","y",250),
         decelerate(0.5,"amd","y",0),
         "",
         decelerate(0.5,"amd","y",250),
         fire("amd"),
         "",
-        hireUseActor("left_chip"),
+        hire("left_chip"),
         set("left_chip","x",-500),
         decelerate(0.5,"left_chip","x",0),
         "",
-        hireUseActor("right_chip"),
+        hire("right_chip"),
         set("right_chip","x",500),
         decelerate(0.5,"right_chip","x",0),
         "",
-        hireUseActor("whitescreen","intel"),
-        hireUseActor("shrinking_particle_backdrop","whitescreen"),
+        hire("whitescreen",default_value,"intel"),
+        hire("shrinking_particle_backdrop",default_value,"whitescreen"),
         hire("magnified_box",new MagnifiedBoxActor("electron_box"),"whitescreen"),
         fadeOutAndFire(1,
             "intel",
@@ -279,7 +280,7 @@ window.addEventListener("load",function() {
                 "shrinking_particle_backdrop",
                 "magnified_box"
             ),
-            hireAndFadeInUseActor(1,"glass_half_empty"),
+            hireAndFadeIn(1,"glass_half_empty"),
             hireAndFadeIn(1,"faaaaace",makeFaaaaaceActor())
         ),
         "",
@@ -292,13 +293,13 @@ window.addEventListener("load",function() {
         parallel(
             fadeOutAndFire(1,"faaaaace"),
             fadeOut(1,"glass_half_full"),
-            hireAndFadeInUseActor(1,"huge_zero","glass_half_full")
+            hireAndFadeIn(1,"huge_zero",default_value,"glass_half_full")
         ),
         fire("glass_half_full"),
         "",
         parallel(
             fadeOut(0.5,"huge_zero"),
-            hireAndFadeInUseActor(0.5,"huge_one")
+            hireAndFadeIn(0.5,"huge_one")
         ),
         "",
         fadeOut(0.5,"huge_one"),
@@ -352,11 +353,11 @@ window.addEventListener("load",function() {
             decelerate(1,"four_digits_right_column","x",-120,0)
         ),
         "",
-        hireAndFadeInUseActor(1,"function_applied_to_four_digits"),
+        hireAndFadeIn(1,"function_applied_to_four_digits"),
         "",
-        hireAndFadeInUseActor(1,"eye","four_digits_left_column"),
+        hireAndFadeIn(1,"eye",default_value,"four_digits_left_column"),
         "",
-        hireUseActor("four_digits_post_measurement"),
+        hire("four_digits_post_measurement"),
         fadeOutAndFire(1,
             "four_digits_left_column",
             "four_digits_right_column",
@@ -373,7 +374,7 @@ window.addEventListener("load",function() {
             var entrances = []
             for(var i = 1; i <= 9; ++i) {
                 var id = "quantum_algorithm_" + i
-                lines.push(hireUseActor(id))
+                lines.push(hire(id))
                 lines.push(set(id,"x",1024))
                 entrances.push(
                     sequence(
@@ -430,8 +431,8 @@ window.addEventListener("load",function() {
             return parallel.apply(null,unfades)
         })(),
         "",
-        hireUseActor("globe"),
-        hireUseActor("i_hate_quantum_computers"),
+        hireUseActors("globe","i_hate_quantum_computers"),
+        set(styleOf("i_hate_quantum_computers"),"opacity",0),
         set("globe","x",514.9845),
         set("globe","y",450.625),
         parallel(
@@ -494,7 +495,7 @@ window.addEventListener("load",function() {
             linear(1,"quantum_computer","damage",0)
         ),
         "",
-        hireAndFadeInUseActor(1,"lightning_bolt_shield","globe"),
+        hireAndFadeIn(1,"lightning_bolt_shield",default_value,"globe"),
         hireUseActor("lightning_bolt_cover","globe"),
         "",
         hire("lightning_bolt_1",new UseActor("lightning_bolt"),"lightning_bolt_cover"),
@@ -520,7 +521,7 @@ window.addEventListener("load",function() {
         ),
         "",
         moveToEnd("globe"),
-        hireAndFadeInUseActor(1,"whitescreen","globe"),
+        hireAndFadeIn(1,"whitescreen",default_value,"globe"),
         fire(
             "lightning_bolt_1",
             "lightning_bolt_2",
@@ -539,13 +540,13 @@ window.addEventListener("load",function() {
         //@+node:gcross.20110702233701.1179: *3* Classical error correction
         rotateTitle(4),
         "",
-        hireAndFadeInUseActor(1,"middle_bit_zero"),
+        hireAndFadeIn(1,"middle_bit_zero"),
         "",
         fireLightningBoltAtMiddleZero(),
         "",
         parallel(
             fadeOutAndFire(1,"middle_bit_one"),
-            hireAndFadeInUseActor(1,"middle_bit_zero")
+            hireAndFadeIn(1,"middle_bit_zero")
         ),
         "",
         hire("left_bit_zero",new UseActor("middle_bit_zero")),
@@ -557,20 +558,20 @@ window.addEventListener("load",function() {
         "",
         fireLightningBoltAtMiddleZero(),
         "",
-        hireAndFadeInUseActor(0.5,"voting_box"),
+        hireAndFadeIn(0.5,"voting_box"),
         "",
         wait(0.1),
-        hireUseActor("voting_box_input","left_bit_zero"),
-        hireUseActor("voting_box_input_cover","left_bit_zero"),
+        hire("voting_box_input",default_value,"left_bit_zero"),
+        hire("voting_box_input_cover",default_value,"left_bit_zero"),
         linear(1,"voting_box_input_cover","y",360),
         fire("voting_box_input_cover"),
-        hireUseActor("voting_box_output","voting_box"),
-        hireUseActor("voting_box_output_cover","voting_box"),
+        hire("voting_box_output",default_value,"voting_box"),
+        hire("voting_box_output_cover",default_value,"voting_box"),
         linear(0.5,"voting_box_output_cover","x",380),
         fire("voting_box_output_cover"),
         "",
         parallel(
-            hireAndFadeInUseActor(1,"middle_bit_zero"),
+            hireAndFadeIn(1,"middle_bit_zero"),
             fadeOutAndFire(1,
                 "middle_bit_one",
                 "voting_box",
@@ -578,7 +579,7 @@ window.addEventListener("load",function() {
                 "voting_box_output"
             )
         ),
-        hireAndFadeInUseActor(1,"i_hate_democracy"),
+        hireAndFadeIn(1,"i_hate_democracy"),
         "",
         parallel(
             fadeOut(1,"i_hate_democracy"),
@@ -591,11 +592,11 @@ window.addEventListener("load",function() {
         //@+node:gcross.20110705142905.1189: *3* Quantum error correction
         rotateTitle(5),
         "",
-        hireAndFadeInUseActor(1,"qubits_1_through_3"),
+        hireAndFadeIn(1,"qubits_1_through_3"),
         "",
         parallel(
             sequence(
-                hireUseActor("middle_bit_lightning_bolt","globe"),
+                hire("middle_bit_lightning_bolt",default_value,"globe"),
                 parallel(
                     accelerate(0.75,"middle_bit_lightning_bolt","x",382.232),
                     accelerate(0.75,"middle_bit_lightning_bolt","y",-333.75)
@@ -604,23 +605,23 @@ window.addEventListener("load",function() {
             ),
             sequence(
                 wait(0.5),
-                hireAndFadeInUseActor(0.1,"middle_bit_explosion"),
+                hireAndFadeIn(0.1,"middle_bit_explosion"),
                 fadeOutAndFire(1,"middle_bit_explosion")
             )
         ),
         "",
-        hireAndFadeInUseActor(0.5,"voting_box"),
+        hireAndFadeIn(0.5,"voting_box"),
         "",
-        hireAndFadeInUseActor(1,"eye","left_bit_zero"),
+        hireAndFadeIn(1,"eye",default_value,"left_bit_zero"),
         "",
         parallel(
             fadeIn(1,"left_bit_zero"),
-            hireAndFadeInUseActor(1,"middle_bit_one"),
+            hireAndFadeIn(1,"middle_bit_one"),
             fadeIn(1,"right_bit_zero"),
             fadeOutAndFire(1,"qubits_1_through_3")
         ),
         "",
-        hireAndFadeInUseActor(1,"maniacal_laughter"),
+        hireAndFadeIn(1,"maniacal_laughter"),
         "",
         fadeOutAndFire(1,
             "eye",
@@ -634,10 +635,10 @@ window.addEventListener("load",function() {
         //@+node:gcross.20110705142905.1193: *3* Classical error correction: an alternative
         rotateTitle(6),
         "",
-        hireAndFadeInUseActor(1,"classical_bits"),
+        hireAndFadeIn(1,"classical_bits"),
         "",
-        hireUseActor("do_we_agree_cover","classical_bits"),
-        hireUseActor("do_we_agree","do_we_agree_cover"),
+        hire("do_we_agree_cover",default_value,"classical_bits"),
+        hire("do_we_agree",default_value,"do_we_agree_cover"),
         linear(0.5,"do_we_agree_cover","y",151),
         fire("do_we_agree_cover"),
         "",
@@ -657,7 +658,6 @@ window.addEventListener("load",function() {
         ),
         "",
         parallel(
-            fadeOut(0.5,"do_we_agree_right_check"),
             fadeIn(0.5,"do_we_agree_left_X"),
             fadeOut(0.5,"do_we_agree_left_check"),
             fadeOutAndFire(0.5,"classical_bit_3_error"),
@@ -677,7 +677,7 @@ window.addEventListener("load",function() {
         //@+node:gcross.20110709173714.1269: *3* Quantum measurement
         rotateTitle(7),
         "",
-        hireUseActor("bloch_sphere"),
+        hire("bloch_sphere"),
         set(styleFor(".bloch"),"opacity",0),
         linear(1,styleFor(".bloch.bloch_classical_bit_values"),"opacity",0,1),
         "",
@@ -701,7 +701,7 @@ window.addEventListener("load",function() {
         set(styleFor(".bloch.bloch_axis.bloch_Z_axis"),"opacity",1),
         parallel(
             linear(1,styleFor(".bloch.bloch_axis"),"opacity",1,0.25),
-            hireAndFadeInUseActor(1,"bloch_Z_measurement_outcomes")
+            hireAndFadeIn(1,"bloch_Z_measurement_outcomes")
         ),
         "",
         parallel(
@@ -710,7 +710,7 @@ window.addEventListener("load",function() {
                 set(styleFor(".bloch.bloch_axis.bloch_Z_axis"),"opacity","")
             ),
             linear(1,styleFor(".bloch.bloch_axis.bloch_X_axis"),"opacity",0.25,1),
-            hireAndFadeInUseActor(1,"bloch_X_measurement_outcomes"),
+            hireAndFadeIn(1,"bloch_X_measurement_outcomes"),
             fadeOut(1,"bloch_Z_measurement_outcomes")
         ),
         "",
@@ -720,7 +720,7 @@ window.addEventListener("load",function() {
                 set(styleFor(".bloch.bloch_axis.bloch_X_axis"),"opacity","")
             ),
             linear(1,styleFor(".bloch.bloch_axis.bloch_Y_axis"),"opacity",0.25,1),
-            hireAndFadeInUseActor(1,"bloch_Y_measurement_outcomes"),
+            hireAndFadeIn(1,"bloch_Y_measurement_outcomes"),
             fadeOut(1,"bloch_X_measurement_outcomes")
         ),
         "",
@@ -737,7 +737,7 @@ window.addEventListener("load",function() {
             ].map(function (selector) { return set(styleFor(selector),"opacity",""); })
         ),
         "",
-        hireAndFadeInUseActor(0.5,"first_code_backdrop"),
+        hireAndFadeIn(0.5,"first_code_backdrop"),
         hireUseActors("first_code_measurement_1","first_code_measurement_2","first_code_measurement_3"),
         set("first_code_measurement_1","x",280),
         set("first_code_measurement_2","x",280),
@@ -756,7 +756,7 @@ window.addEventListener("load",function() {
         "",
         parallel(
             linear(1,styleFor(".first_code_Z_measurements"),"opacity",1,0.1),
-            hireAndFadeInUseActor(1,"bloch_identity_measurement_label"),
+            hireAndFadeIn(1,"bloch_identity_measurement_label"),
             linear(1,styleFor(".bloch.bloch_axis"),"opacity",1,0.25),
             linear(1,styleOf("bloch_X_measurement_outcomes"),"opacity",1,0.25),
             linear(1,styleOf("bloch_Y_measurement_outcomes"),"opacity",1,0.25),
@@ -764,20 +764,27 @@ window.addEventListener("load",function() {
         ),
         "",
         parallel(
-            linear(1,styleOf("bloch_X_measurement_outcomes"),"opacity",1),
-            linear(1,styleOf("bloch_Y_measurement_outcomes"),"opacity",1),
-            linear(1,styleOf("bloch_Z_measurement_outcomes"),"opacity",1),
             fadeOutAndFire(1,"bloch_identity_measurement_label"),
+            parallel(
+                linear(1,styleFor(".bloch.bloch_axis"),"opacity",1),
+                linear(1,styleFor(".first_code_Z_measurements"),"opacity",1)
+            ),
             sequence(
-                wait(0.01), // workaround for what looks like a stupid browser bug that was causing measurement outcomes to flicker
+                // Dumb workaround for what looks like a stupid browser bug that was causing measurement outcomes to flicker
+                fire("bloch_X_measurement_outcomes","bloch_Y_measurement_outcomes","bloch_Z_measurement_outcomes"),
+                hireUseActors("bloch_X_measurement_outcomes","bloch_Y_measurement_outcomes","bloch_Z_measurement_outcomes"),
+                set(styleOf("bloch_X_measurement_outcomes"),"opacity",0.25),
+                set(styleOf("bloch_Y_measurement_outcomes"),"opacity",0.25),
+                set(styleOf("bloch_Z_measurement_outcomes"),"opacity",0.25),
                 parallel(
-                    linear(1,styleFor(".bloch.bloch_axis"),"opacity",1),
-                    linear(1,styleFor(".first_code_Z_measurements"),"opacity",1)
+                    linear(1,styleOf("bloch_X_measurement_outcomes"),"opacity",0.25,1),
+                    linear(1,styleOf("bloch_Y_measurement_outcomes"),"opacity",0.25,1),
+                    linear(1,styleOf("bloch_Z_measurement_outcomes"),"opacity",0.25,1)
                 )
             )
         ),
         "",
-        hireAndFadeInUseActor(0.5,"second_code_backdrop"),
+        hireAndFadeIn(0.5,"second_code_backdrop"),
         hireUseActors("second_code_measurement_1","second_code_measurement_2"),
         set("second_code_measurement_1","x",280),
         set("second_code_measurement_2","x",280),
@@ -814,15 +821,15 @@ window.addEventListener("load",function() {
         sequence.apply(null,[1,2,3].map(function(index) {
             var actor_name = "feynman_algorithm_step_" + index
             return sequence(
-                hireUseActor(actor_name),
+                hire(actor_name),
                 set(actor_name,"x",1000),
                 decelerate(0.75,actor_name,"x",0)
             );
         })),
         "",
-        hireAndFadeInUseActor(1,"brain"),
+        hireAndFadeIn(1,"brain"),
         "",
-        hireAndFadeInUseActor(1,"notbrain"),
+        hireAndFadeIn(1,"notbrain"),
         "",
         hireAndFadeInUseActors(1,"grey_rectangle","title_slide"),
         fire(
@@ -833,7 +840,7 @@ window.addEventListener("load",function() {
             "notbrain",
             titles[8]
         ),
-        hireUseActor(titles[9],"grey_rectangle"),
+        hire(titles[9],default_value,"grey_rectangle"),
         "",
         fadeOutAndFire(1,"grey_rectangle","title_slide"),
         "",
@@ -841,15 +848,15 @@ window.addEventListener("load",function() {
         sequence.apply(null,[1,2,3].map(function(index) {
             var actor_name = "codequest_algorithm_step_" + index
             return sequence(
-                hireUseActor(actor_name),
+                hire(actor_name),
                 set(actor_name,"x",1000),
                 decelerate(0.75,actor_name,"x",0)
             );
         })),
         "",
-        hireAndFadeInUseActor(1,"chuck_norris"),
+        hireAndFadeIn(1,"chuck_norris"),
         "",
-        hireUseActor("codequest_computer","chuck_norris"),
+        hire("codequest_computer",default_value,"chuck_norris"),
         fadeOutAndFire(1,
             "codequest_algorithm_step_1",
             "codequest_algorithm_step_2",
@@ -857,8 +864,8 @@ window.addEventListener("load",function() {
             "chuck_norris"
         ),
         "",
-        hireUseActor("codequest_hunt_cover","codequest_computer"),
-        hireUseActor("codequest_hunt","codequest_hunt_cover"),
+        hire("codequest_hunt_cover",default_value,"codequest_computer"),
+        hire("codequest_hunt",default_value,"codequest_hunt_cover"),
         linear(2,"codequest_hunt_cover","x",975),
         //@-others
         //@-<< Script >>
