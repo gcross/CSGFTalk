@@ -899,6 +899,43 @@ window.addEventListener("load",function() {
         "",
         hireAndFadeIn(1,"tiling_choice_counts"),
         "",
+        parallel(
+            fadeOutAndFire(1,
+                "tilings",
+                "tiling_choice_counts"
+            ),
+            hireAndFadeIn(1,"quadrille")
+        ),
+        "",
+        set(styleFor("#quadrille_X_axis_tics"),"opacity",1),
+        set(styleFor("#quadrille_X_axis_radius"),"opacity",1),
+        linear(0.5,styleFor(".quadrille_axes"),"opacity",1,0.25),
+        "",
+        linear(0.5,styleFor("#quadrille_X_axis_count"),"opacity",0.25,1),
+        "",
+        remove(styleFor("#quadrille_X_axis_tics"),"opacity"),
+        remove(styleFor("#quadrille_X_axis_radius"),"opacity"),
+        remove(styleFor("#quadrille_X_axis_count"),"opacity"),
+        set(styleFor(".quadrille_axes.quadrille_X_axis"),"opacity",1),
+        parallel(
+            sequence(
+                linear(0.5,styleFor(".quadrille_axes.quadrille_X_axis"),"opacity",0.25),
+                remove(styleFor(".quadrille_axes.quadrille_X_axis"),"opacity")
+            ),
+            linear(0.5,styleFor("#quadrille_Y_axis"),"opacity",0.25,1)
+        ),
+        "",
+        parallel(
+            sequence(
+                linear(0.5,styleFor("#quadrille_Y_axis"),"opacity",0.25),
+                remove(styleFor("#quadrille_Y_axis"),"opacity")
+            ),
+            linear(0.5,styleFor("#quadrille_Z_axis"),"opacity",0.25,1)
+        ),
+        "",
+        linear(0.5,styleFor(".quadrille_axes"),"opacity",1),
+        remove(styleFor(".quadrille_axes"),"opacity"),
+        remove(styleFor("#quadrille_Z_axis"),"opacity"),
         //@-others
         //@-<< Script >>
     ]))
