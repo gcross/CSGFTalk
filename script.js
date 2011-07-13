@@ -53,7 +53,7 @@ appendToMethod(MagnifiedBoxActor.prototype,"clearNode",function() {
     delete this.right_particle_box
     delete this.right_particle
 })
-augmentWithStyleBehavior(MagnifiedBoxActor)
+augmentWithStyleBehavior(MagnifiedBoxActor.prototype)
 //@+node:gcross.20110702233701.1159: *3* FaaaaaceActor
 function makeFaaaaaceActor() {
     var actor = new UseActor("faaaaace")
