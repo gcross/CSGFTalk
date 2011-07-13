@@ -820,13 +820,14 @@ window.addEventListener("load",function() {
         //@+node:gcross.20110711225427.1272: *3* The Feynman Algorithm
         rotateTitle(8),
         "",
-        hireUseActors("feynman_algorithm_step_1","feynman_algorithm_step_2","feynman_algorithm_step_3"),
-        set("feynman_algorithm_step_1","x",1000),
-        set("feynman_algorithm_step_2","x",1000),
-        set("feynman_algorithm_step_3","x",1000),
-        decelerate(0.75,"feynman_algorithm_step_1","x",0),
-        decelerate(0.75,"feynman_algorithm_step_2","x",0),
-        decelerate(0.75,"feynman_algorithm_step_3","x",0),
+        sequence.apply(null,[1,2,3].map(function(index) {
+            var actor_name = "feynman_algorithm_step_" + index
+            return sequence(
+                hireUseActor(actor_name),
+                set(actor_name,"x",1000),
+                decelerate(0.75,actor_name,"x",0)
+            );
+        })),
         "",
         hireAndFadeInUseActor(1,"brain"),
         "",
