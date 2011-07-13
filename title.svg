@@ -25,12 +25,12 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1021"
-     inkscape:window-height="846"
+     inkscape:window-width="1319"
+     inkscape:window-height="847"
      id="namedview28655"
      showgrid="false"
      inkscape:zoom="0.68229167"
-     inkscape:cx="511.99999"
+     inkscape:cx="498.07633"
      inkscape:cy="384"
      inkscape:window-x="0"
      inkscape:window-y="0"
@@ -44,7 +44,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -55,7 +55,7 @@
        xlink:href="#linearGradient13117-6"
        id="radialGradient24467-3"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1,0,0,0.10861341,-10,364.37882)"
+       gradientTransform="matrix(1.331,0,0,0.14456444,-179.08153,396.40942)"
        cx="509.76562"
        cy="500.32031"
        fx="509.76562"
@@ -77,7 +77,7 @@
        xlink:href="#linearGradient13117-6"
        id="radialGradient24492-5"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.56198256,0.00860791,-0.00166344,0.10860067,215.25181,360.00586)"
+       gradientTransform="matrix(0.74799879,0.01145713,-0.00221404,0.14454749,120.72863,390.58902)"
        cx="509.76562"
        cy="1181.6359"
        fx="509.76562"
@@ -99,7 +99,7 @@
        xlink:href="#linearGradient13117-6"
        id="radialGradient24412-3"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1,0,0,0.10861341,-10,224.37882)"
+       gradientTransform="matrix(1.771561,0,0,0.19241527,-411.96272,146.39323)"
        cx="509.76562"
        cy="500.32031"
        fx="509.76562"
@@ -120,144 +120,100 @@
     <image
        sodipodi:absref="/Users/gcross/Projects/CSGFTalk/nuclear-explosion.jpg"
        xlink:href="nuclear-explosion.jpg"
-       style="opacity:0.5"
-       width="720"
-       height="576"
-       id="image13011"
+       y="162"
        x="142"
-       y="162" />
+       id="image13011"
+       height="576"
+       width="720"
+       style="opacity:0.5" />
     <image
        sodipodi:absref="/Users/gcross/Projects/CSGFTalk/sword.png"
        xlink:href="sword.png"
-       width="179.71875"
-       height="515.95312"
-       id="image14139"
+       y="168.3756"
        x="416.68402"
-       y="168.3756" />
+       id="image14139"
+       height="515.95312"
+       width="179.71875" />
   </g>
   <text
      sodipodi:linespacing="125%"
      id="text24394"
-     y="296.39999"
-     x="503.05469"
-     style="font-size:96px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
+     y="273.98315"
+     x="496.94495"
+     style="font-size:170.06983948px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
      xml:space="preserve"><tspan
-       y="296.39999"
-       x="503.05469"
+       y="273.98315"
+       x="496.94495"
        id="tspan24396"
-       sodipodi:role="line">Weapons of Mass Simulation</tspan></text>
+       sodipodi:role="line">CodeQuest</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:96px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24412-3);fill-opacity:1;stroke:#000000;stroke-opacity:1;display:inline;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
-     x="501.05469"
-     y="294.39999"
+     style="font-size:170.06983948px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24412-3);fill-opacity:1;stroke:#000000;stroke-width:1.77156115;stroke-opacity:1;display:inline;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
+     x="493.40186"
+     y="270.44006"
      id="text24402"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan24404"
-       x="501.05469"
-       y="294.39999"
-       style="fill:url(#radialGradient24412-3);fill-opacity:1;stroke:#000000;stroke-opacity:1">Weapons of Mass Simulation</tspan></text>
+       x="493.40186"
+       y="270.44006"
+       style="fill:url(#radialGradient24412-3);fill-opacity:1;stroke:#000000;stroke-width:1.77156115;stroke-opacity:1">CodeQuest</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
-     x="503.05469"
-     y="436.39999"
+     style="font-size:95.8319931px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
+     x="503.79428"
+     y="492.26959"
      id="text24428"
      sodipodi:linespacing="100%"><tspan
        id="tspan24434"
        sodipodi:role="line"
-       x="503.05469"
-       y="436.39999"
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Eadui;-inkscape-font-specification:Eadui Medium">Smashing down the barriers</tspan></text>
+       x="503.79428"
+       y="492.26959"
+       style="font-size:95.8319931px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Eadui;-inkscape-font-specification:Eadui Medium">a Weapon of Mass Simulation</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
-     x="503.05469"
-     y="436.39999"
-     id="text24496"
-     sodipodi:linespacing="100%"><tspan
-       sodipodi:role="line"
-       id="tspan24498"
-       x="503.05469"
-       y="436.39999"
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Eadui;-inkscape-font-specification:Eadui Medium" /><tspan
-       id="tspan24500"
-       sodipodi:role="line"
-       x="503.05469"
-       y="508.39999"
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Eadui;-inkscape-font-specification:Eadui Medium" /><tspan
-       id="tspan24502"
-       sodipodi:role="line"
-       x="503.05469"
-       y="580.40002"
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Eadui;-inkscape-font-specification:Eadui Medium">quantum computer.</tspan></text>
-  <text
-     sodipodi:linespacing="100%"
-     id="text24418"
-     y="434.39999"
-     x="501.05469"
-     style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24494-0);fill-opacity:1;stroke:#000000;stroke-opacity:1;display:inline;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
-     xml:space="preserve"><tspan
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24494-0);fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
-       y="434.39999"
-       x="501.05469"
-       id="tspan24420"
-       sodipodi:role="line" /><tspan
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24494-0);fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
-       y="506.39999"
-       x="501.05469"
-       sodipodi:role="line"
-       id="tspan24426" /><tspan
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24494-0);fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
-       y="578.40002"
-       x="501.05469"
-       sodipodi:role="line"
-       id="tspan24490">quantum computer.</tspan></text>
-  <text
-     xml:space="preserve"
-     style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
-     x="503.05469"
-     y="436.39999"
+     style="font-size:95.8319931px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
+     x="503.79428"
+     y="492.26959"
      id="text24504"
      sodipodi:linespacing="100%"><tspan
-       sodipodi:role="line"
-       id="tspan24506"
-       x="503.05469"
-       y="436.39999"
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Eadui;-inkscape-font-specification:Eadui Medium" /><tspan
        id="tspan24508"
        sodipodi:role="line"
-       x="503.05469"
-       y="508.39999"
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Eadui;-inkscape-font-specification:Eadui Medium">to building a robust</tspan></text>
+       x="503.79428"
+       y="492.26959"
+       style="font-size:95.8319931px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Eadui;-inkscape-font-specification:Eadui Medium"></tspan><tspan
+       sodipodi:role="line"
+       x="503.79428"
+       y="588.10156"
+       style="font-size:95.8319931px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
+       id="tspan75221">in the War on Noise</tspan></text>
   <text
      sodipodi:linespacing="100%"
      id="text24446"
-     y="434.39999"
-     x="501.05469"
-     style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24492-5);fill-opacity:1;stroke:#000000;stroke-opacity:1;display:inline;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
+     y="489.60764"
+     x="501.13226"
+     style="font-size:95.8319931px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24492-5);fill-opacity:1;stroke:#000000;stroke-width:1.33100009;stroke-opacity:1;display:inline;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
      xml:space="preserve"><tspan
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24492-5);fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
-       y="434.39999"
-       x="501.05469"
-       id="tspan24448"
-       sodipodi:role="line" /><tspan
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24492-5);fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
-       y="506.39999"
-       x="501.05469"
+       style="font-size:95.8319931px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24492-5);fill-opacity:1;stroke:#000000;stroke-width:1.33100009;stroke-opacity:1;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
+       y="489.60764"
+       x="501.13226"
        sodipodi:role="line"
-       id="tspan24452">to building a robust</tspan></text>
+       id="tspan24452" /><tspan
+       style="font-size:95.8319931px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24492-5);fill-opacity:1;stroke:#000000;stroke-width:1.33100009;stroke-opacity:1;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
+       y="585.43964"
+       x="501.13226"
+       sodipodi:role="line"
+       id="tspan75217">in the War on Noise</tspan></text>
   <text
      xml:space="preserve"
-     style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24467-3);fill-opacity:1;stroke:#000000;stroke-opacity:1;display:inline;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
-     x="501.05469"
-     y="434.39999"
+     style="font-size:95.8319931px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24467-3);fill-opacity:1;stroke:#000000;stroke-width:1.33100009;stroke-opacity:1;display:inline;font-family:Eadui;-inkscape-font-specification:Eadui Medium"
+     x="501.13226"
+     y="489.60764"
      id="text24454"
      sodipodi:linespacing="100%"><tspan
        id="tspan24460"
        sodipodi:role="line"
-       x="501.05469"
-       y="434.39999"
-       style="font-size:72px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24467-3);fill-opacity:1;stroke:#000000;stroke-opacity:1;font-family:Eadui;-inkscape-font-specification:Eadui Medium">Smashing down the barriers</tspan></text>
+       x="501.13226"
+       y="489.60764"
+       style="font-size:95.8319931px;font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;text-align:center;line-height:100%;writing-mode:lr-tb;text-anchor:middle;fill:url(#radialGradient24467-3);fill-opacity:1;stroke:#000000;stroke-width:1.33100009;stroke-opacity:1;font-family:Eadui;-inkscape-font-specification:Eadui Medium">a Weapon of Mass Simulation</tspan></text>
 </svg>

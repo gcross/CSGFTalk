@@ -141,6 +141,8 @@ var titles = [
     "Quantum error correction",
     "Classical error correction: an alternative",
     "Quantum measurement",
+    "The Feynman Algorithm (applied to codes)",
+    "The CodeQuest Algorithm",
     //@-<< Titles >>
 ]
 
@@ -814,6 +816,34 @@ window.addEventListener("load",function() {
             "second_code_measurement_1",
             "second_code_measurement_2"
         ),
+        "",
+        //@+node:gcross.20110711225427.1272: *3* The Feynman Algorithm
+        rotateTitle(8),
+        "",
+        hireUseActors("feynman_algorithm_step_1","feynman_algorithm_step_2","feynman_algorithm_step_3"),
+        set("feynman_algorithm_step_1","x",1000),
+        set("feynman_algorithm_step_2","x",1000),
+        set("feynman_algorithm_step_3","x",1000),
+        decelerate(0.75,"feynman_algorithm_step_1","x",0),
+        decelerate(0.75,"feynman_algorithm_step_2","x",0),
+        decelerate(0.75,"feynman_algorithm_step_3","x",0),
+        "",
+        hireAndFadeInUseActor(1,"brain"),
+        "",
+        hireAndFadeInUseActor(1,"notbrain"),
+        "",
+        hireAndFadeInUseActors(1,"grey_rectangle","title_slide"),
+        fire(
+            "feynman_algorithm_step_1",
+            "feynman_algorithm_step_2",
+            "feynman_algorithm_step_3",
+            "brain",
+            "notbrain",
+            titles[8]
+        ),
+        hireUseActor(titles[9],"grey_rectangle"),
+        "",
+        fadeOutAndFire(1,"grey_rectangle","title_slide"),
         "",
         //@-others
         //@-<< Script >>
