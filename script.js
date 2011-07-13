@@ -701,13 +701,11 @@ window.addEventListener("load",function() {
         ),
         "",
         set(function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis.bloch_Z_axis") },"opacity",1),
-        set(function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis") },"opacity"),
         parallel(
             linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis") },"opacity",1,0.25),
             hireAndFadeInUseActor(1,"bloch_Z_measurement_outcomes")
         ),
         "",
-        set(function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis.bloch_X_axis") },"opacity",""),
         parallel(
             sequence(
                 linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis.bloch_Z_axis") },"opacity",0.25),
@@ -718,7 +716,6 @@ window.addEventListener("load",function() {
             fadeOut(1,"bloch_Z_measurement_outcomes")
         ),
         "",
-        set(function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis.bloch_Y_axis") },"opacity",""),
         parallel(
             sequence(
                 linear(1,function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis.bloch_X_axis") },"opacity",0.25),
@@ -761,8 +758,6 @@ window.addEventListener("load",function() {
             )
         ),
         "",
-        set(function(stage) { return stage.lookupStyleFor(".first_code_Z_measurements") },"opacity",""),
-        set(function(stage) { return stage.lookupStyleFor(".bloch.bloch_axis") },"opacity"),
         parallel(
             linear(1,function(stage) { return stage.lookupStyleFor(".first_code_Z_measurements") },"opacity",1,0.1),
             hireAndFadeInUseActor(1,"bloch_identity_measurement_label"),
