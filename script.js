@@ -113,6 +113,14 @@ function fireLightningBoltAtMiddleZero() {
         )
     )
 }
+//@+node:gcross.20110712230459.5663: *3* hireAndSlideLeft
+function hireAndSlideLeft(duration,actor_name,offset) {
+    return sequence(
+        hire(actor_name),
+        set(actor_name,"x",offset),
+        decelerate(duration,actor_name,"x",0)
+    )
+}
 //@+node:gcross.20110712230459.5655: *3* nextTitleIndex
 var current_title_index = -1
 
