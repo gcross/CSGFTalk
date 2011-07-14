@@ -35,7 +35,7 @@ augment(MagnifiedBoxActor.prototype,{
     }
 ,   update: function() {
         var t = 1-this.magnification
-        this.blur.setAttribute("stdDeviation",40*t*t*t*t)
+        this.blur.setAttribute("stdDeviation",30*t*t*t)
         this.line1.setAttribute("x2",270+130*this.magnification)
         this.line1.setAttribute("y2",480-130*this.magnification)
         this.line2.setAttribute("x2",270+130*this.magnification)
