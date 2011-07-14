@@ -238,7 +238,6 @@ window.addEventListener("load",function() {
         smooth(0.5,"magnified_box","particle_y",+65),
         hire("magnified_box2",new MagnifiedBoxActor("particle_box2"),"magnified_box"),
         set("magnified_box2","particle_y",+65),
-        "",
         fadeOutAndFire(0.5,"magnified_box"),
         "",
         parallel(
