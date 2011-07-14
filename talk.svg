@@ -7065,17 +7065,17 @@
          offset="1" />
     </linearGradient>
   <rect
-     width="1020"
+     width="1024"
      height="768"
-     x="3"
-     y="5.1757809e-07"
+     x="0"
+     y="0"
      id="rect8707"
      style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.2330811;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
   <rect
-     width="1022"
+     width="1024"
      height="130"
-     x="2"
-     y="-2.9999999e-05"
+     x="0"
+     y="0"
      id="rect3686"
      style="fill:url(#linearGradient3698);fill-opacity:1;stroke:none;display:inline" />
 </g>
