@@ -113,6 +113,13 @@ function fireLightningBoltAtMiddleZero() {
         )
     )
 }
+//@+node:gcross.20110712230459.5655: *3* nextTitleIndex
+var current_title_index = -1
+
+function nextTitleIndex() {
+    current_title_index += 1
+    return current_title_index
+}
 //@+node:gcross.20110702143210.1163: *3* rotateTitle
 function rotateTitle(index) {
     return sequence(
@@ -128,11 +135,23 @@ function rotateTitle(index) {
         )
     )
 }
+//@+node:gcross.20110712230459.5656: *3* rotateNextTitle
+function rotateNextTitle() {
+    return rotateTitle(nextTitleIndex())
+}
+//@+node:gcross.20110712230459.5651: *3* rotateSlide
+function rotateSlide(old_slide,new_slide) {
+    return parallel(
+        fadeOutAndFire(1,old_slide),
+        hireAndFadeIn(1,new_slide)
+    )
+}
 //@-others
 
 var titles = [
     //@+<< Titles >>
     //@+node:gcross.20110629122941.1134: ** << Titles >>
+    "Outline",
     "Quantum mechanics is fuzzy",
     "But who actually makes things that small?",
     "Quantum computing: embrace the fuzz!",
@@ -144,6 +163,7 @@ var titles = [
     "The Feynman Algorithm (applied to codes)",
     "The CodeQuest Algorithm",
     "Case Study: Lattice codes",
+    "Conclusions",
     //@-<< Titles >>
 ]
 
@@ -172,16 +192,43 @@ window.addEventListener("load",function() {
         //@@c
         hire("quantum_computer",makeQuantumComputerActor()),
         hideQuantumComputer(),
-        //@+node:gcross.20110702143210.1150: *3* Quantum mechanics is fuzzy
         "",
+        //@+node:gcross.20110712230459.5657: *3* Outline
         hire("standard_backdrop",default_value,"title_slide"),
-        hire(titles[0],default_value,"title_slide"),
-        hire("shrinking_particle_backdrop",default_value,"title_slide"),
-        hire("magnified_box",new MagnifiedBoxActor("particle_box"),"title_slide"),
+        hire(titles[nextTitleIndex()],default_value,"title_slide"),
         hire("grey_rectangle",default_value,"title_slide"),
         fadeOutAndFire(1,
             "grey_rectangle",
             "title_slide"
+        ),
+        "",
+        hireAndSlideLeft(0.5,"outline_bullet_1",1000),
+        "",
+        hireAndSlideLeft(0.5,"outline_bullet_2",1000),
+        "",
+        hireAndSlideLeft(0.5,"outline_bullet_3",1000),
+        "",
+        hireAndSlideLeft(0.5,"outline_bullet_4",1000),
+        "",
+        hireAndSlideLeft(0.5,"outline_bullet_5",1000),
+        "",
+        hireAndSlideLeft(0.5,"outline_bullet_6",1000),
+        "",
+        fadeOutAndFire(1,
+            "outline_bullet_1",
+            "outline_bullet_2",
+            "outline_bullet_3",
+            "outline_bullet_4",
+            "outline_bullet_5",
+            "outline_bullet_6"
+        ),
+        "",
+        //@+node:gcross.20110702143210.1150: *3* Quantum mechanics is fuzzy
+        rotateNextTitle(),
+        "",
+        parallel(
+            hireAndFadeIn(1,"shrinking_particle_backdrop"),
+            hireAndFadeIn(1,"magnified_box",new MagnifiedBoxActor("particle_box"))
         ),
         "",
         decelerate(10,"magnified_box","magnification",0),
@@ -203,7 +250,7 @@ window.addEventListener("load",function() {
         ),
         "",
         //@+node:gcross.20110702143210.1152: *3* But who actually makes things that small?
-        rotateTitle(1),
+        rotateNextTitle(),
         "",
         hire("intel"),
         set("intel","x",512),
@@ -274,7 +321,7 @@ window.addEventListener("load",function() {
         ),
         "",
         //@+node:gcross.20110702143210.1161: *3* Quantum computing: embrace the fuzz!
-        rotateTitle(2),
+        rotateNextTitle(),
         "",
         parallel(
             fadeOutAndFire(1,
@@ -457,7 +504,7 @@ window.addEventListener("load",function() {
         fadeIn(0.5,"quantum_computer"),
         "",
         //@+node:gcross.20110702233701.1174: *3* How quantum computers die
-        rotateTitle(3),
+        rotateNextTitle(),
         "",
         hire("lightning_bolt_1",new UseActor("lightning_bolt"),"globe"),
         hire("lightning_bolt_2",new UseActor("lightning_bolt"),"globe"),
@@ -539,7 +586,7 @@ window.addEventListener("load",function() {
         ),
         "",
         //@+node:gcross.20110702233701.1179: *3* Classical error correction
-        rotateTitle(4),
+        rotateNextTitle(),
         "",
         hireAndFadeIn(1,"middle_bit_zero"),
         "",
@@ -591,7 +638,7 @@ window.addEventListener("load",function() {
         fire("i_hate_democracy","middle_bit_zero"),
         "",
         //@+node:gcross.20110705142905.1189: *3* Quantum error correction
-        rotateTitle(5),
+        rotateNextTitle(),
         "",
         hireAndFadeIn(1,"qubits_1_through_3"),
         "",
@@ -634,7 +681,7 @@ window.addEventListener("load",function() {
         ),
         "",
         //@+node:gcross.20110705142905.1193: *3* Classical error correction: an alternative
-        rotateTitle(6),
+        rotateNextTitle(),
         "",
         hireAndFadeIn(1,"classical_bits"),
         "",
@@ -676,7 +723,7 @@ window.addEventListener("load",function() {
         ),
         "",
         //@+node:gcross.20110709173714.1269: *3* Quantum measurement
-        rotateTitle(7),
+        rotateNextTitle(),
         "",
         hire("bloch_sphere"),
         set(styleFor(".bloch"),"opacity",0),
@@ -817,7 +864,7 @@ window.addEventListener("load",function() {
         ),
         "",
         //@+node:gcross.20110711225427.1272: *3* The Feynman Algorithm
-        rotateTitle(8),
+        rotateNextTitle(),
         "",
         sequence.apply(null,[1,2,3].map(function(index) {
             var actor_name = "feynman_algorithm_step_" + index
@@ -833,15 +880,20 @@ window.addEventListener("load",function() {
         hireAndFadeIn(1,"notbrain"),
         "",
         hireAndFadeInUseActors(1,"grey_rectangle","title_slide"),
-        fire(
-            "feynman_algorithm_step_1",
-            "feynman_algorithm_step_2",
-            "feynman_algorithm_step_3",
-            "brain",
-            "notbrain",
-            titles[8]
-        ),
-        hire(titles[9],default_value,"grey_rectangle"),
+        (function() {
+            next_title_index = nextTitleIndex()
+            return sequence(
+                fire(
+                    "feynman_algorithm_step_1",
+                    "feynman_algorithm_step_2",
+                    "feynman_algorithm_step_3",
+                    "brain",
+                    "notbrain",
+                    titles[next_title_index-1]
+                ),
+                hire(titles[next_title_index],default_value,"grey_rectangle")
+            )
+        })(),
         "",
         fadeOutAndFire(1,"grey_rectangle","title_slide"),
         "",
@@ -872,7 +924,7 @@ window.addEventListener("load",function() {
         "",
         fadeOutAndFire(1,"codequest_computer","codequest_hunt"),
         //@+node:gcross.20110712230459.1204: *3* Case Study: Lattice codes
-        rotateTitle(10),
+        rotateNextTitle(),
         "",
         set(styleFor("#lattice_exhibition_qubits"),"opacity",0),
         set(styleFor("#lattice_exhibition_interactions"),"opacity",0),
@@ -936,6 +988,46 @@ window.addEventListener("load",function() {
         linear(0.5,styleFor(".quadrille_axes"),"opacity",1),
         remove(styleFor(".quadrille_axes"),"opacity"),
         remove(styleFor("#quadrille_Z_axis"),"opacity"),
+        "",
+        rotateSlide("quadrille","bacon_shor_code"),
+        "",
+        rotateSlide("bacon_shor_code","hextille"),
+        "",
+        parallel(
+            linear(0.5,styleFor("#hextille_distance_3"),"opacity",1,0.25),
+            linear(0.5,styleFor("#hextille_distance_4"),"opacity",1,0.25)
+        ),
+        linear(0.5,styleFor("#hextille_distance_3"),"opacity",1),
+        "",
+        parallel(
+            linear(0.5,styleFor("#hextille_distance_3"),"opacity",0.25),
+            sequence(
+                linear(0.5,styleFor("#hextille_distance_4"),"opacity",1),
+                remove(styleFor("#hextille_distance_4"),"opacity")
+            )
+        ),
+        "",
+        sequence(
+            linear(0.5,styleFor("#hextille_distance_3"),"opacity",1),
+            remove(styleFor("#hextille_distance_3"),"opacity")
+        ),
+        "",
+        rotateSlide("hextille","hextille_codes"),
+        "",
+        rotateSlide("hextille_codes","rhombihexadeltille"),
+        "",
+        rotateSlide("rhombihexadeltille","rhombihexadeltille_code"),
+        "",
+        fadeOutAndFire(1,"rhombihexadeltille_code"),
+        "",
+        //@+node:gcross.20110712230459.5660: *4* Conclusions
+        rotateNextTitle(),
+        "",
+        hireAndSlideLeft(0.5,"conclusions_bullet_1",1000),
+        "",
+        hireAndSlideLeft(0.5,"conclusions_bullet_2",1000),
+        "",
+        hireAndSlideLeft(0.5,"conclusions_bullet_3",1000),
         //@-others
         //@-<< Script >>
     ]))
