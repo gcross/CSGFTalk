@@ -15,9 +15,9 @@ augment(MagnifiedBoxActor.prototype,{
     magnification: 1
 ,   particle_y: 0
 ,   createNode: function() {
-        this.line1 = document.getElementById("magnification_line_1").cloneNode()
+        this.line1 = document.getElementById("magnification_line_1").cloneNode(false)
         this.line1.removeAttribute("id")
-        this.line2 = document.getElementById("magnification_line_2").cloneNode()
+        this.line2 = document.getElementById("magnification_line_2").cloneNode(false)
         this.line2.removeAttribute("id")
         this.left_particle_box = document.getElementById(this.particle_box_id).cloneNode(true)
         this.left_particle = this.left_particle_box.getElementsByClassName("particle").item(0)
@@ -181,7 +181,7 @@ window.addEventListener("load",function() {
         var title_template = document.getElementById("title_template")
         for(var i = 0; i < titles.length; ++i) {
             var title = titles[i]
-            var node = title_template.cloneNode()
+            var node = title_template.cloneNode(false)
             node.setAttribute("id",title)
             node.appendChild(document.createTextNode(title))
             resources.appendChild(node)
