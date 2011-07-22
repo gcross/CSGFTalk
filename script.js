@@ -509,7 +509,6 @@ window.addEventListener("load",function() {
         showQuantumComputer(),
         moveToEnd("quantum_computer"),
         fadeIn(0.5,"quantum_computer"),
-        "",
         //@+node:gcross.20110702233701.1174: *3* How quantum computers die
         rotateNextTitle(),
         "",
