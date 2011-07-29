@@ -1,13 +1,3 @@
-The code for my CSGF talk is broken into two parts.  The first is a library that I call "Slick", which you can get from:
-
-    http://github.com/gcross/Slick
-
-The second is the source code for the talk itself, which you can get from:
-
-    http://github.com/gcross/CSGFTalk
-
-You will need to copy or symlink slick.js from the Slick directory into the CSGFTalk directory so that it can be found.
-
 I developed the talk using Chrome since it had the best implementation of the SVG and Javascript standards, and at the moment it seems to be the only browser that can view the whole talk correctly.  Firefox can also view the talk, but because it is missing some SVG filter support one of the graphics looks a little off and one effect is missing entirely.  Safari is in a similar boat as Firefox, but it has even worse support for SVG filters since it doesn't show blur effects, which the starting animations seem pointless.  Opera seems to do nothing at all, and I haven't even tried IE but due to its incomplete support of web standards I doubt much works at all.  :-)
 
 The keys are mapped as follows:
